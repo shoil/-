@@ -1,0 +1,250 @@
+.top {
+  height: 36px;
+  background-color: #fafafa;
+}
+
+.top span {
+  margin: 0 15px;
+}
+
+.top a {
+  line-height: 36px;
+}
+
+.top .login {
+  float: right;
+}
+
+.logo {
+  position: relative;
+  height: 80px;
+}
+
+.logo > img {
+  position: absolute;
+  top: 10px;
+  left: 0;
+}
+
+.logo .logo-right {
+  float: right;
+}
+
+.logo .logo-right > p {
+  margin-top: 10px;
+  text-align: right;
+}
+
+.logo .logo-right > p > img {
+  position: relative;
+  top: 3px;
+}
+
+.logo .logo-right .parent {
+  position: relative;
+}
+
+.logo .logo-right .parent input:first-of-type {
+  position: absolute;
+  right: 153px;
+  top: 10px;
+  height: 40px;
+  width: 385px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.logo .logo-right .parent input:last-of-type {
+  position: absolute;
+  right: 114px;
+  top: 10px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ccc;
+  outline: none;
+  background: #fff url("../images/fangdajing.png") no-repeat center center;
+}
+
+.logo .logo-right .parent > span {
+  position: relative;
+  right: 176px;
+  top: 20px;
+}
+
+.logo .logo-right > a {
+  display: inline-block;
+  height: 40px;
+  width: 100px;
+  line-height: 40px;
+  font-size: 14px;
+  background-color: #ffdb3b;
+  text-align: center;
+  position: relative;
+  top: -6px;
+  right: -39px;
+}
+
+.nav {
+  margin-top: 10px;
+}
+
+.nav li {
+  float: left;
+}
+
+.nav li:first-of-type a {
+  background-color: #ff4a00;
+}
+
+.nav li a {
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 26px;
+  background-color: #40414f;
+  font-size: 14px;
+  color: #fff;
+}
+
+.nav li a:hover {
+  background-color: #ff4a00;
+}
+
+.nav li a i {
+  margin-left: 106px;
+}
+
+.content {
+  margin-top: 30px;
+}
+
+.banner {
+  width: 950px;
+  height: 270px;
+  float: left;
+  background: url("../images/mshanghai4.7.jpg") no-repeat center center;
+}
+
+.sidebar, .code .sign {
+  float: left;
+  width: 204px;
+  border: 1px solid #ccc;
+  height: 270px;
+  padding-left: 20px;
+  padding-top: 15px;
+  margin-left: 15px;
+}
+
+.charge > form > p:first-of-type {
+  font-size: 14px;
+  line-height: 28px;
+}
+
+.charge > form > p:last-of-type {
+  font-size: 12px;
+  line-height: 45px;
+  color: #b4b4b4;
+}
+
+.charge > form > p:last-of-type b {
+  font-size: 14px;
+}
+
+.charge > form > input {
+  height: 40px;
+  width: 150px;
+  border: 1px solid #ccc;
+}
+
+.charge > form > input:first-of-type {
+  margin-bottom: 30px;
+}
+
+.charge > form > input:last-of-type {
+  background-color: #b4b4b4;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+}
+
+.charge > form > select {
+  height: 40px;
+  width: 150px;
+}
+
+.phone {
+  width: 950px;
+  border: 1px solid #ccc;
+  margin-top: 15px;
+  float: left;
+}
+
+.phone .sort {
+  text-align: center;
+  background-color: #fafafa;
+  border-bottom: 1px solid #ccc;
+}
+
+.phone .sort img {
+  margin: 15px auto;
+}
+
+.phone .sort li {
+  box-sizing: border-box;
+  margin-bottom: -1px;
+}
+
+.phone .sort li:not(:last-of-type) {
+  border-right: 1px solid #ccc;
+}
+
+.phone .sort li p {
+  margin-bottom: 10px;
+}
+
+.phone .sort .select {
+  background-color: #fff;
+}
+
+.phone .row-one, .phone .row-two {
+  padding: 30px;
+}
+
+.phone .row-one li, .phone .row-two li {
+  line-height: 26px;
+  text-align: center;
+}
+
+.phone .row-one li a, .phone .row-two li a {
+  padding: 4px 10px;
+  color: #fff;
+  background-color: red;
+}
+
+.phone .row-one li .blue, .phone .row-two li .blue {
+  background-color: #03519c;
+}
+
+.phone .row-two li:not(:nth-of-type(2)) {
+  opacity: .5;
+}
+
+.code {
+  float: left;
+  margin-top: 15px;
+}
+
+.code .sign {
+  float: none;
+  height: initial;
+  padding: 20px;
+}
+
+.code .sign p {
+  line-height: 30px;
+}
+
+.code .sign:last-of-type {
+  margin-top: 15px;
+}

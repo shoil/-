@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        #div1{
+            width:200px;
+            height:200px;
+            background-color: #71e4ff;
+            position: absolute;
+            left:200px;
+            top:200px;
+        }
+        .t{
+            width:100%;
+            height:20px;
+            background-color: #ffa2d3;
+            position: absolute;
+            left:0;
+            top:0;
+        }
+        .r{
+             width:20px;
+             height:100%;
+             background-color: #ffa2d3;
+             position: absolute;
+             right:0;
+             top:0;
+         }
+        .b{
+            width:100%;
+            height:20px;
+            background-color: #ffa2d3;
+            position: absolute;
+            left:0;
+            bottom:0;
+        }
+        .l{
+            width:20px;
+            height:100%;
+            background-color: #ffa2d3;
+            position: absolute;
+            left:0;
+            top:0;
+        }
+
+        .lt{
+            width:20px;
+            height:20px;
+            background-color: #93ff6b;
+            position: absolute;
+            left:0;
+            top:0;
+        }
+        .lb{
+            width:20px;
+            height:20px;
+            background-color: #93ff6b;
+            position: absolute;
+            left:0;
+            bottom:0;
+        }
+        .rt{
+            width:20px;
+            height:20px;
+            background-color: #93ff6b;
+            position: absolute;
+            right:0;
+            top:0;
+        }
+        .rb{
+            width:20px;
+            height:20px;
+            background-color: #93ff6b;
+            position: absolute;
+            right:0;
+            bottom:0;
+        }
+    </style>
+   
+</head>
+<body>
+    <div id="div1">
+        <div class="t"></div>
+        <div class="r"></div>
+        <div class="b"></div>
+        <div class="l"></div>
+        <div class="lt"></div>
+        <div class="lb"></div>
+        <div class="rt"></div>
+        <div class="rb"></div>
+    </div>
+    <script>
+        window.onload=function(){
+            //获取元素
+            var oBox=document.getElementById('div1');
+            var aDiv=oBox.getElementsByTagName('div');
+            //遍历每个可拖拽缩放的对应区域
+            for(var i=0;i<aDiv.length;i++){
+                //执行拖拽缩放函数，参数为对应区域
+                drag(aDiv[i]);
+            }
+            //封装一个拖拽函数(设置一个参数为前要拖拽的对象)
+            function drag(obj){
+                //当鼠标在当前区域按下时
+                obj.onmousedown=function(ev){
+                    //事件捕获
+                    var oEvent=ev || event;
+                    //存储当前的一些值
+                    //当前物体的宽高
+                    oPreW=oBox.offsetWidth;
+                    oPreH=oBox.offsetHeight;
+                    //当前物体离祖先定位左边和顶部的距离
+                    oPreL=oBox.offsetLeft;
+                    oPreT=oBox.offsetTop;
+                    //当前事件点（鼠标）离可视区的距离
+                    oPreX=oEvent.clientX;
+                    oPreY=oEvent.clientY;
+                    //当鼠标移动时
+                    document.onmousemove=function(ev){
+                        //再次事件捕获
+                        var oEvent=ev || event;
+                        //条件判断,当前鼠标拖拽区域对象是否有对应class，有就执行动作（后面用循环）
+                        //这里用的条件判断方便于后续的对角缩放
+                        if(obj.className.indexOf('t')!=-1){
+                            //变化的量等于移动时的可视距离减去鼠标按下时的可视距离（纵向）
+                            var oChaY=oPreY-oEvent.clientY;
+                            //当前盒子的宽度等于之前的高度加上变化的量
+                            oBox.style.height=oPreH+oChaY+'px';
+                            //注意盒子本身的top定位也随之改变
+                            oBox.style.top=oPreT-oChaY+'px';
+                        }
+                        
+                        if(obj.className.indexOf('r')!=-1){
+                            //变化的量等于移动时的可视距离减去鼠标按下时的可视距离（横向）
+                            var oChaX=oEvent.clientX-oPreX;
+                            //当前盒子的宽度等于之前的宽度加上变化的量
+                            oBox.style.width=oPreW+oChaX+'px';
+                        }
+                        if(obj.className.indexOf('b')!=-1){
+                            //变化的量等于移动时的可视距离减去鼠标按下时的可视距离（纵向）
+                            var oChaY=oEvent.clientY-oPreY;
+                            //当前盒子高度等于之前的高度加上变化的量
+                            oBox.style.height=oPreH+oChaY+'px';
+                        }
+                        if(obj.className.indexOf('l')!=-1){
+                            //变化的量等于移动时的可视距离减去鼠标按下时的可视距离（横向）
+                            var oChaX=oPreX-oEvent.clientX;
+                            //当前盒子的宽度等于之前的宽度加上变化的量
+                            oBox.style.width=oPreW+oChaX+'px';
+                            //注意盒子本身的left定位也随之改变
+                            oBox.style.left=oPreL-oChaX+'px';
+                        }
+                    };
+                    //当鼠标抬起时
+                    document.onmouseup=function(){
+                        //当之前的鼠标移动和抬起事件失效
+                        document.onmousemove=null;
+                        document.onmouseup=null;
+                    };
+                    //阻止默认行为
+                    return false;
+                };
+            }
+        };
+    </script>
+</body>
+</html>

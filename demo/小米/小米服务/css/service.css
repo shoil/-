@@ -1,0 +1,424 @@
+.top {
+  height: 36px;
+  background-color: #fafafa;
+}
+
+.top span {
+  margin: 0 15px;
+}
+
+.top a {
+  line-height: 36px;
+}
+
+.top .login {
+  float: right;
+}
+
+.logo {
+  position: relative;
+  height: 80px;
+}
+
+.logo > img {
+  position: absolute;
+  top: 10px;
+  left: 0;
+}
+
+.logo .logo-right {
+  float: right;
+}
+
+.logo .logo-right > p {
+  margin-top: 10px;
+  text-align: right;
+}
+
+.logo .logo-right > p > img {
+  position: relative;
+  top: 3px;
+}
+
+.logo .logo-right .parent {
+  position: relative;
+}
+
+.logo .logo-right .parent input:first-of-type {
+  position: absolute;
+  right: 153px;
+  top: 10px;
+  height: 40px;
+  width: 385px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.logo .logo-right .parent input:last-of-type {
+  position: absolute;
+  right: 114px;
+  top: 10px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ccc;
+  outline: none;
+  background: #fff url("../images/fangdajing.png") no-repeat center center;
+}
+
+.logo .logo-right .parent > span {
+  position: relative;
+  right: 176px;
+  top: 20px;
+}
+
+.logo .logo-right > a {
+  display: inline-block;
+  height: 40px;
+  width: 100px;
+  line-height: 40px;
+  font-size: 14px;
+  background-color: #ffdb3b;
+  text-align: center;
+  position: relative;
+  top: -6px;
+  right: -39px;
+}
+
+.nav {
+  margin-top: 10px;
+}
+
+.nav li {
+  float: left;
+}
+
+.nav li:first-of-type a {
+  background-color: #ff4a00;
+}
+
+.nav li a {
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 26px;
+  background-color: #40414f;
+  font-size: 14px;
+  color: #fff;
+}
+
+.nav li a:hover {
+  background-color: #ff4a00;
+}
+
+.nav li a i {
+  margin-left: 106px;
+}
+
+/*---------------bottom---------------*/
+.bottom {
+  margin-top: 30px;
+  background-color: #fafafa;
+}
+
+.fix {
+  border-bottom: 1px solid #ccc;
+}
+
+.fix li {
+  box-sizing: border-box;
+  padding-top: 52px;
+  height: 155px;
+  text-align: center;
+}
+
+.fix li p {
+  font-size: 14px;
+  line-height: 34px;
+}
+
+.aboutus {
+  margin-top: 30px;
+  padding-bottom: 35px;
+  border-bottom: 1px solid #ccc;
+}
+
+.aboutus ul {
+  float: left;
+  width: 77%;
+}
+
+.aboutus ul li {
+  padding-left: 29px;
+  padding-bottom: 3px;
+  box-sizing: border-box;
+  border-right: 1px solid #ccc;
+}
+
+.aboutus ul li a {
+  color: #aaa;
+  line-height: 25px;
+}
+
+.aboutus ul li a:first-of-type {
+  font-size: 14px;
+  color: #000;
+  line-height: 35px;
+}
+
+.aboutus ul li:first-of-type {
+  padding-left: 0;
+}
+
+.aboutus > div {
+  float: left;
+  padding-left: 84px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.aboutus > div h1 {
+  margin-bottom: 6px;
+}
+
+.aboutus > div p {
+  color: #aaa;
+}
+
+.aboutus > div a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 3px 3px;
+  color: #fff;
+  background-color: #ff4a00;
+}
+
+.bottom > .container > p:first-of-type {
+  margin-top: 30px;
+}
+
+.bottom > .container > p:last-of-type {
+  margin-bottom: 50px;
+}
+
+.bottom > .container p {
+  text-align: center;
+}
+
+.bottom > .container p:first-of-type {
+  margin-bottom: 3px;
+}
+
+.bottom > .container p:first-of-type span {
+  margin: 0 5px;
+}
+
+.bottom > .container p:last-of-type {
+  margin-top: 10px;
+}
+
+.bottom > .container p:last-of-type img {
+  position: relative;
+  top: 7px;
+}
+
+.bottom > .container p:last-of-type select {
+  margin-left: 10px;
+  width: 200px;
+  height: 40px;
+  color: #aaa;
+}
+
+.sv-box {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+.sv-box button {
+  width: 40px;
+  height: 70px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: url(../images/icon-slides.png) no-repeat;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.sv-box #prev {
+  background-position-x: -86px;
+}
+
+.sv-box #prev:hover {
+  background-position-x: 0;
+}
+
+.sv-box #next {
+  right: 0;
+  background-position-x: -123px;
+}
+
+.sv-box #next:hover {
+  background-position-x: -41px;
+}
+
+.sv-list {
+  position: absolute;
+  width: 4680px;
+  margin-top: 10px;
+  height: 300px;
+  font-size: 0;
+}
+
+.sv-list img {
+  width: 1170px;
+}
+
+.question, .line3 {
+  line-height: 50px;
+  height: 50px;
+  border-bottom: 1px solid #ccc;
+  font-size: 20px;
+}
+
+.choose {
+  height: 250px;
+  text-align: center;
+}
+
+.choose img {
+  margin-top: 20px;
+}
+
+.choose p {
+  margin-top: 30px;
+}
+
+.answer {
+  margin-top: 30px;
+}
+
+.answer li {
+  box-sizing: border-box;
+  height: 140px;
+  background-color: #fafafa;
+  border-right: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  text-align: center;
+}
+
+.answer li img {
+  margin-top: 40px;
+}
+
+.answer li p {
+  margin-top: 10px;
+}
+
+.answer li .parent {
+  position: relative;
+  top: 49px;
+  right: 90px;
+}
+
+.answer li .parent > input:first-of-type {
+  width: 200px;
+  height: 40px;
+  border: 1px solid #ccc;
+  outline: none;
+  position: absolute;
+}
+
+.answer li .parent > input:last-of-type {
+  width: 40px;
+  height: 42px;
+  position: absolute;
+  left: 307px;
+  border: 1px solid #ccc;
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+  background: #fff url(../images/fangdajing.png) no-repeat center center;
+}
+
+.line3 span {
+  float: right;
+}
+
+.sv-service {
+  margin-top: 15px;
+  border-bottom: 1px solid #aaa;
+}
+
+.sv-service > li {
+  box-sizing: border-box;
+  float: left;
+  height: 190px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-left: 25px;
+}
+
+.sv-service > li:not(:last-of-type) {
+  border-right: 1px solid #ccc;
+}
+
+.sv-service > li:first-of-type li:nth-of-type(2) a {
+  color: red;
+}
+
+.sv-service > li li a {
+  color: #aaa;
+  font-size: 13px;
+  line-height: 28px;
+}
+
+.sv-service > li li:nth-of-type(1) {
+  margin-top: 20px;
+}
+
+.sv-service > li li:nth-of-type(1) a {
+  color: black;
+}
+
+.galary li {
+  position: relative;
+  margin-top: 30px;
+  height: 360px;
+  box-sizing: border-box;
+}
+
+.galary li:nth-of-type(1) {
+  background: url(../images/index-customers_01.jpg) no-repeat center center;
+}
+
+.galary li:nth-of-type(2) {
+  background: url(../images/index-customers_02.jpg) no-repeat center center;
+}
+
+.galary li:nth-of-type(3) {
+  background: url(../images/index-customers-03.jpg) no-repeat center center;
+}
+
+.galary li:nth-of-type(4) {
+  background: url(../images/index-customers_04.jpg) no-repeat center center;
+}
+
+.galary li:not(:last-of-type) {
+  border-right: 10px solid #fff;
+}
+
+.galary li div {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background: #333;
+  text-align: center;
+}
+
+.galary li div p {
+  color: #fff;
+  line-height: 30px;
+}

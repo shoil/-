@@ -1,0 +1,166 @@
+@import "style.scss";
+.sv-box {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    button {
+        width: 40px;
+        height: 70px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: url(../images/icon-slides.png) no-repeat;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+    #prev {
+        background-position-x: -86px;
+        &:hover {
+            background-position-x: 0;
+        }
+    }
+    #next {
+        right: 0;
+        background-position-x: -123px;
+        &:hover { background-position-x: -41px; }
+    }
+}
+.sv-list {
+    position: absolute;
+    width: 1170*4px;
+    margin-top: 10px;
+    height: 300px;
+    font-size: 0;
+    // background: url("../images/fuwu-header-1.jpg") no-repeat center center;
+    img {
+        width: 1170px;
+    }
+}
+
+
+.question {
+    line-height: 50px;
+    height: 50px;
+    border-bottom: 1px solid #ccc;
+    font-size: 20px;
+}
+.choose {
+    height: 250px;
+    text-align: center;
+    img { margin-top: 20px; }
+    p { margin-top: 30px; }
+}
+.answer {
+    margin-top: 30px;
+    li {
+        box-sizing: border-box;
+        height: 140px;
+        background-color: $c-gray;
+        border-right: 3px solid #fff;
+        border-bottom: 3px solid #fff;
+        text-align: center;
+        img {
+            margin-top: 40px;
+        }
+        p {
+            margin-top: 10px;
+        }
+        .parent {
+            position: relative;
+            top: 49px;
+            right: 90px;
+        }
+        .parent>input:first-of-type {
+            width: 200px;
+            height: 40px; 
+            border: 1px solid #ccc;
+            outline: none;
+            position: absolute;
+            
+        }
+        .parent>input:last-of-type {
+            width: 40px;
+            height: 42px;
+            position: absolute;
+            left: 307px;
+            border: 1px solid #ccc;
+            color: #fff;
+            font-size: 16px;
+            outline: none;
+            background: #fff url(../images/fangdajing.png) no-repeat center center;
+        }
+    }
+}
+.line3 {
+    @extend .question;
+    span {
+        float: right;
+    }
+}
+.sv-service {
+    margin-top: 15px;
+    // border-top: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+    >li {
+        box-sizing: border-box;
+        float: left;
+        height: 190px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding-left: 25px;
+        &:not(:last-of-type) {
+            border-right: 1px solid #ccc;
+        }
+        &:first-of-type li {
+            &:nth-of-type(2) {
+                a { color: red; }
+            }
+        }
+        li {
+            a { 
+                color: #aaa;
+                font-size: 13px;
+                line-height: 28px;
+            }
+            &:nth-of-type(1) {
+                margin-top: 20px;
+                a { color: black; }
+            }
+        }
+    }
+}
+.galary {
+    li {
+        position: relative;
+        margin-top: 30px;
+        height: 360px;
+        box-sizing: border-box;
+        &:nth-of-type(1){
+            background: url(../images/index-customers_01.jpg) no-repeat center center;
+        }
+        &:nth-of-type(2){
+            background: url(../images/index-customers_02.jpg) no-repeat center center;
+        }
+        &:nth-of-type(3){
+            background: url(../images/index-customers-03.jpg) no-repeat center center;
+        }
+        &:nth-of-type(4){
+            background: url(../images/index-customers_04.jpg) no-repeat center center;
+        }
+        &:not(:last-of-type){
+            border-right: 10px solid #fff;
+        }
+        div {
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            background: #333;
+            text-align: center;
+            p {
+                color: #fff;
+                line-height: 30px;
+            }
+        }
+    }
+}

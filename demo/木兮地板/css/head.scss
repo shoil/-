@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.yc-nav{
+    width: 80%;
+    margin: auto;
+    
+    .navbar{
+        margin-bottom: 0px;
+        border: none;
+        background: white;
+        .navbar-header{
+            .navbar-brand{
+                display: inline-block;
+                width: 280px;
+                height: 80px;
+                background: url(../images/logo0.png) no-repeat center center;
+            }
+        }
+        .collapse{
+            a{
+                line-height: 50px;
+                padding: 15px 8px;
+            }
+        }
+    }
+}
+.select{
+    vertical-align:bottom;
+}
+.navbar-nav .select>a {
+    color: #2dae36 !important;
+    border-bottom: 2px solid #2dae36 !important;
+}

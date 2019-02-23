@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 闭包可以访问当前函数以外的变量 -->
+    <!-- <script>
+        function getOuter() {
+            var date = '2月23日';
+            function getDate(str) {
+                console.log(str + date);  //外部的date
+            }
+            return getDate('今天是'); //"今天是233"
+        }
+        getOuter();
+    </script> -->
+    <!-- 2.即使外部函数已经返回，闭包仍能访问外部函数定义的变量 -->
+    <!-- <script>
+        function getOuts() {
+            var date = '233'
+            function getDate(str) {
+                console.log(str + date);  //外部的date
+            }
+            return getDate;     //外部函数返回
+        }
+        var today = getOuts();
+        today('今天是：');   //"今天是：233"
+        today('明天不是：');   //"明天不是：233"F
+
+    </script> -->
+    <!-- 3、闭包可以更新外部变量的值 -->
+    <script>
+        function updateCount(){
+           var count  = 0;
+            function getCount(val){
+                count = val;
+                console.log(count);
+            }
+            return getCount;
+        }
+        var count = updateCount();
+        count(622);
+        count(623);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,325 @@
+$c-green: #19bebe;
+$c-grayb: #f0f0f0;
+$c-gray: #bdc3c7;
+$c-grayf: #ededed;
+$c-orange: #fea700;
+$c-bottomgray: #d6d6d6;
+
+
+.content {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.header {
+    height: 75px;
+    background: $c-green url(../images/logo.png) no-repeat center center;
+}
+
+.nav {
+    height: 40px;
+    background-color: $c-grayb;
+    font-size: 14px;
+    .content {
+        text-align: center;
+        padding: 0 15px;
+        .left {
+            float: left;
+            line-height: 40px;
+        }
+        ul {
+            margin: 0 auto;
+            display: inline-block;
+            li {
+                width: 100px;
+                float: left;
+                // text-align: center;
+                a { 
+                    line-height: 40px;
+                }
+            }
+        }
+        .right {
+            float: right;
+            line-height: 40px;
+            a {
+                // color: #000 !important;
+                &:hover {
+                    color: $c-orange !important; 
+                }
+            }
+        }
+    }
+    a {
+        &:hover { color: $c-green; }
+    }
+}
+
+.left, .right {
+    img {
+        position: relative;
+        top: 5px;
+        margin-right: 3px;
+    }  
+}
+
+.user {
+    float: left;
+    width: 200px;
+    background-color: $c-grayb;
+    
+    margin-top: 30px;
+    // text-align: center;
+    ul {
+        margin-bottom: 20px;
+        // width: 100%;
+        li {
+            // width: 100%;
+            padding: 0 45px;
+            box-sizing: border-box;
+            border-left: 2px solid transparent;
+            &:hover {
+                border-left-color: $c-green;
+                background-color: #ccc;
+            }
+        }
+    }
+    .title {
+        line-height: 30px;
+        font-weight: bold;
+        font-size: 14px;
+        position: relative;
+        i { 
+            // font-size: 40px;
+            // width: 20px;
+            position: absolute;
+            left: 21px;
+            cursor: pointer;
+            // border: 1px solid #ccc; 
+        }
+    }
+    a {
+        line-height: 30px;
+        
+    }
+    >a { 
+        margin-left: 45px;
+        &:first-of-type {
+            line-height: 70px;
+            font-size: 16px; 
+            font-weight: bold;
+        }
+    }
+}
+
+.box {
+    width: 790px;
+    height: 781px;
+    margin-top: 30px;
+    margin-left: 10px;
+    float: left;
+    background-color: $c-grayb;
+}
+
+/*-------------------iframe部分-----------------*/
+.box iframe {
+    width: 100%;
+    height: 400px;
+}
+.userframe {
+    height: 179px;
+    background-color: $c-grayf;
+}
+.user-left {
+    float: left;
+    position: relative;
+    font-size: 14px;
+    img {
+        position: absolute;
+        left: 31px;
+        top: 30px;
+    }
+    p {
+        &:first-of-type {
+            font-size: 16px;
+            margin-top: 42px;
+            margin-bottom: 15px;
+        }
+        margin-left: 157px;
+    }
+}
+.user-right {
+    float: left;
+    position: relative;
+    img {
+        position: absolute;
+        &:first-of-type {
+            top: 60px;
+            left: 5px;
+        }
+        &:last-of-type {
+            top: 60px;
+            left: 170px;
+        }
+    }
+    p {
+        margin-left: 53px;
+        &:first-of-type {
+            margin-top: 60px;
+            span { margin-right: 114px; }
+        }
+        &:last-of-type {
+            span { margin-right: 78px; }
+        }
+        a {
+            color: $c-green;
+        }
+    }
+}
+.userframe {
+    >span {
+        display: block;
+        float: left;
+        width: 1px;
+        height: 100px;
+        background-color: $c-gray;
+        margin: 30px 30px 0 80px;
+    }
+}
+
+/*-------------iframe修改密码部分---------------*/
+.changebox {
+    background-color: $c-grayf;
+    height: 350px;
+    .top {
+        margin-top: 30px;
+        margin-left: 100px;
+        border-left: 3px solid $c-green;
+        padding-left: 40px;
+        line-height: 40px;
+        font-size: 16px;
+    }
+    .dash {
+        height: 1px;
+        border-bottom: 1px dashed $c-gray;
+    }
+    .phone {
+        width: 500px;
+        height: 75px;
+        margin-top: 20px;
+        margin-left: 100px;
+        padding-top: 10px;
+        padding-left: 30px;
+        background-color: #fff;
+        position: relative;
+        border: 2px solid $c-gray;
+        font-size: 14px;
+        img {
+            position: absolute;
+            top: 13px;
+        }
+        p {
+            margin-left: 54px;
+            &:first-of-type {
+                margin-top: 7px;
+                
+            }
+        }
+        input {
+            width: 100px;
+            height: 40px;
+            color: #fff;
+            background-color: $c-orange;
+            position: absolute;
+            top: 16px;
+            right: 50px;
+            border: none;
+            outline: none;
+        }
+    }
+    .weixin {
+        @extend .phone;
+        margin-top: 30px;
+        img {
+            top: 21px;
+        }
+    }
+}
+
+
+/*-----------bottom---------*/
+.bottom {
+    background-color: #505050;
+    margin-top: 50px;
+    color: #fff;
+    .b-logo {
+        height: 38px;
+        width: 128px;
+        margin: 20px 0 5px 10px;
+        // margin-top: 20px;
+        // margin-bottom: 5px;
+        background: url(../images/footerLogo.png) no-repeat center center;
+    }
+    .aboutus {
+        float: left;
+        p {
+            margin-left: 10px;
+            &:first-of-type {
+                font-weight: bold;
+                margin-top: 20px;
+                margin-bottom: 5px;
+            }
+        }
+    }
+    ul {
+        // margin: 0 20px;
+        float: left;
+        li { 
+            &:not(:first-of-type){
+                margin-top: 13px;
+            }
+            a {
+                color: $c-bottomgray;
+            }
+        }
+    }
+    .guanyu {
+        margin-left: 162px;
+    }
+    .banquan {
+        margin-left: 105px;
+        margin-right: 155px;
+    }
+    .tubiao {
+        li {
+            &:not(:first-of-type){
+                margin-top: 3px !important;
+            }
+        }
+        img{
+            position: relative;
+            top: -3px;
+            left: -9px;
+        }
+    }
+    .solid {
+        clear: both;
+        height: 1px;
+        background-color: $c-bottomgray;
+        margin-top: 100px;
+    }
+    >.content {
+        >p{
+            line-height: 50px;
+            color: $c-bottomgray;
+            &:nth-of-type(2) {
+                float: left;
+                margin-left: 10px;
+            }
+            &:nth-of-type(3) {
+                float: right;
+                margin-right: 10px;
+            }
+        }
+    }
+}

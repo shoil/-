@@ -1,0 +1,57 @@
+.binging-container {
+  position: relative;
+}
+
+.binging-container .phone {
+  position: absolute;
+  top: 28px;
+  left: 74px;
+  width: 496px;
+  height: 66px;
+  background: white;
+  border: 2px solid gainsboro;
+}
+
+.binging-container .phone img {
+  padding: 10px 10px 9px 30px;
+}
+
+.binging-container .phone p {
+  color: #c7c7c7;
+}
+
+.binging-container .phone form input {
+  position: absolute;
+  top: 16px;
+  left: 376px;
+  width: 80px;
+  height: 32px;
+  border: 0px;
+}
+
+.binging-container .weixing {
+  position: absolute;
+  top: 120px;
+  left: 74px;
+  width: 496px;
+  height: 66px;
+  background: white;
+  border: 2px solid gainsboro;
+}
+
+.binging-container .weixing img {
+  padding: 10px 10px 9px 30px;
+}
+
+.binging-container .weixing p {
+  color: #c7c7c7;
+}
+
+.binging-container .weixing form input {
+  position: absolute;
+  top: 16px;
+  left: 376px;
+  width: 80px;
+  height: 32px;
+  border: 0px;
+}

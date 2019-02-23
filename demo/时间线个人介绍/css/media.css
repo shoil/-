@@ -1,0 +1,17 @@
+@media (max-width: 992px) {
+    .time>p {
+        margin-bottom: 30px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .time>p:first-of-type {
+        margin-top: 60px;
+    }
+    .right li {
+        /* width: 60%; */
+        margin: -13px 100px;
+    }
+    .right li .text {
+        width: 80%;
+    }
+}

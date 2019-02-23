@@ -1,0 +1,177 @@
+.top {
+  position: relative;
+  width: 100%;
+  height: 36px;
+}
+
+.top .top-container {
+  overflow: hidden;
+  width: 1240px;
+}
+
+.top::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #e0e0e0;
+  top: 36px;
+}
+
+.top-ul .top-li-left {
+  position: relative;
+}
+
+.top-ul .top-li-left a {
+  padding-right: 16px;
+  line-height: 36px;
+  display: block;
+  color: #7d8993;
+}
+
+.top-ul .top-li-left:not(:first-child) > a {
+  padding-left: 16px;
+}
+
+.top-ul .top-li-left:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 1px;
+  height: 16px;
+  border-right: 1px solid #e0e0e0;
+  left: 56px;
+  top: 10px;
+}
+
+.top-ul .top-li-right {
+  position: relative;
+}
+
+.top-ul .top-li-right a {
+  padding-left: 16px;
+  line-height: 36px;
+  color: #7d8993;
+}
+
+.top-ul .top-li-right a:not(:last-child) {
+  padding-right: 16px;
+}
+
+.top-ul .top-li-right:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  border-right: 1px solid #e0e0e0;
+  left: 36px;
+  top: 10px;
+}
+
+.search {
+  width: 1240px;
+  height: 80px;
+  position: relative;
+  top: 10px;
+  overflow: hidden;
+}
+
+.search img {
+  position: absolute;
+  top: 10px;
+}
+
+.search form #text {
+  position: absolute;
+  height: 38px;
+  width: 383px;
+  border: 1px solid #e0e0e0;
+  top: 40px;
+  left: 680px;
+}
+
+.search form #button {
+  position: absolute;
+  top: 40px;
+  left: 1065px;
+  height: 40px;
+  width: 40px;
+  background: white;
+  border: 1px solid #e0e0e0;
+}
+
+.search form img {
+  position: absolute;
+  left: 1077.5px;
+  top: 52.5px;
+}
+
+.search .clock {
+  position: relative;
+  top: 6px;
+}
+
+.search .clock .clock-image {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 3px;
+  left: -24px;
+}
+
+.search .clock a {
+  color: #7d8993;
+  font-size: 12px;
+}
+
+.search .card {
+  position: relative;
+  width: 125px;
+  height: 40px;
+  top: 40px;
+  left: 93px;
+  background-color: #ffdc46;
+}
+
+.search .card a {
+  line-height: 40px;
+}
+
+.search .card a img {
+  position: relative;
+  left: -9px;
+  top: 2px;
+}
+
+.nav {
+  overflow: hidden;
+  position: relative;
+  width: 1240px;
+  height: 50px;
+  top: 25px;
+}
+
+.nav .nav-left {
+  width: 248px;
+  height: 50px;
+  background: #ff4a00;
+}
+
+.nav a {
+  color: white;
+  line-height: 50px;
+  padding: 20px;
+}
+
+.nav .nav-right {
+  width: 992px;
+  height: 50px;
+  background: #404145;
+}
+
+.nav .nav-right .li-two a {
+  color: #7d8993;
+  line-height: 50px;
+  padding: 0px 26px;
+}
+

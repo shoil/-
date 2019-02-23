@@ -1,0 +1,199 @@
+$c-gray: #fafafa;
+$c-mi: #ff4a00;
+.top {
+    height: 36px;
+    background-color: $c-gray;
+    span { margin: 0 15px; }
+    a { line-height: 36px; }
+    .login {
+        float: right;
+    }
+}
+.logo {
+    position: relative;
+    height: 80px;
+    >img {
+        position: absolute;
+        top: 10px;
+        left: 0;
+    }
+    .logo-right {
+        float: right;
+        >p {
+            // display: inline-block;
+            margin-top: 10px;
+            text-align: right;
+            >img {
+                position: relative;
+                top: 3px;
+            }
+        }
+        .parent {
+            position: relative;
+            input {
+                &:first-of-type {
+                    position: absolute;
+                    right: 153px;
+                    top: 10px;
+                    height: 40px;
+                    width: 385px;
+                    box-sizing: border-box;
+                    border: 1px solid #ccc;
+                    outline: none;
+                }
+                &:last-of-type {
+                    position: absolute;
+                    right: 114px;
+                    top: 10px;
+                    width: 40px;
+                    height: 40px;
+                    border: 1px solid #ccc;
+                    outline: none;
+                    background: #fff url("../images/fangdajing.png") no-repeat center center;
+                }
+            }
+            >span {
+                // position: absolute;
+                position: relative;
+                right: 176px;
+                top: 20px;
+
+            }
+
+        }
+        >a {
+            display: inline-block;
+            height: 40px;
+            width: 100px;
+            line-height: 40px;
+            font-size: 14px;
+            background-color: #ffdb3b;
+            text-align: center;
+
+            position: relative;
+            top: -6px;
+            right: -39px;
+        }
+    }
+}
+.nav {
+    margin-top: 10px;
+    li {
+        float: left;
+        &:first-of-type a {
+            background-color: $c-mi;
+        }
+        a {
+            // line-height: 50px;
+            display: inline-block;
+            height: 50px;
+            line-height: 50px;
+            padding: 0 26px;
+            background-color: #40414f;
+            font-size: 14px;
+            color: #fff;
+            &:hover {
+                background-color: $c-mi;
+            }
+            i {
+                margin-left: 106px;
+            }
+        } 
+    }
+}
+
+/*---------------bottom---------------*/
+.bottom {
+    margin-top: 30px;
+    background-color: $c-gray;
+}
+
+.fix {
+    border-bottom: 1px solid #ccc;
+    li {
+        box-sizing: border-box;
+        padding-top: 52px;
+        height: 155px;
+        text-align: center;
+        p { 
+            font-size: 14px;
+            line-height: 34px;
+        }
+    }
+}
+.aboutus {
+    margin-top: 30px;
+    padding-bottom: 35px;
+    border-bottom: 1px solid #ccc;
+    ul {
+        float: left;
+        width: 77%;
+        // padding-bottom: 40px;
+        li {
+            // height: 120px;
+            // float: left;
+            // float: none;
+            padding-left: 29px;
+            padding-bottom: 3px;
+            box-sizing: border-box;
+            border-right: 1px solid #ccc;
+            a {
+                color: #aaa;
+                line-height: 25px;
+                &:first-of-type {
+                    font-size: 14px;
+                    color: #000;
+                    line-height: 35px;
+                }
+            }
+            &:first-of-type {
+                padding-left: 0;
+            }
+            
+        }
+    }
+    >div {
+        float: left;
+        padding-left: 84px;
+        box-sizing: border-box;
+        text-align: center;
+        h1 { margin-bottom: 6px; }
+        p {color: #aaa;}
+        a {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 3px 3px;
+            color: #fff;
+            background-color: $c-mi;
+        }
+    }
+}
+.bottom>.container {
+    p {
+        text-align: center;
+        &:first-of-type {
+            margin-top: 30px;
+            margin-bottom: 3px;
+            // height: 1px;
+            // background-color: #ccc;
+            span { margin: 0 5px; }
+        }
+        // &:nth-of-type(2) {
+            
+        // }
+        &:last-of-type {
+            margin-bottom: 50px;
+            margin-top: 10px;
+            img {
+                position: relative;
+                top: 7px;
+            }
+            select {
+                margin-left: 10px;
+                width: 200px;
+                height: 40px;
+                color: #aaa;
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 两个或多个函数相互嵌套把里面函数保存到外部（全局），里面函数在外面执行可以
+        调用原来函数环境里的变量(执行期上下文)
+         */
+        
+        function a (){
+           
+            function b() {
+                console.log(aaa);
+            }
+            var aaa = 100;
+            return b;
+
+        }
+        var demo = a();
+        demo();
+    </script>
+</body>
+</html>

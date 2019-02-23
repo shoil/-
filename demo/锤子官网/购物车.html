@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            line-height: 50px;
+            list-style: none;
+        }
+        .row::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        li {
+            float: left;
+            text-align: center;
+        }
+        a {
+            display: inline-block;
+            width: 100px;
+            background-color: aqua;
+            text-decoration: none;
+            color: black;
+        }
+        a:hover {
+            background-color: cadetblue;
+        }
+        .drop {
+            position: relative;
+        }
+        .drop-content {
+            position: absolute;
+        }
+        .none{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <ul class="row">
+        <li><a href="#">电脑</a></li>
+        <li class="drop">
+            <a href="#" id="test">手机</a>
+            <div class="drop-content none" id="drop_content">
+                <a href="">小米</a>
+                <a href="">华为</a>
+                <a href="">苹果</a>
+            </div>
+        </li>
+        <li><a href="#">平板</a></li>
+    </ul>
+    <script>
+        var test = document.getElementById("test");
+        var dropContent = document.getElementById("drop_content");
+        test.onclick = function(){
+            dropContent.classList.toggle("none");
+            return false;
+
+        }
+    </script>
+</body>
+</html>

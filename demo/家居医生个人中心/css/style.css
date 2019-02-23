@@ -1,0 +1,346 @@
+@charset "UTF-8";
+.content {
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header {
+  height: 75px;
+  background: #19bebe url(../images/logo.png) no-repeat center center;
+}
+
+.nav {
+  height: 40px;
+  background-color: #f0f0f0;
+  font-size: 14px;
+}
+
+.nav .content {
+  text-align: center;
+  padding: 0 15px;
+}
+
+.nav .content .left {
+  float: left;
+  line-height: 40px;
+}
+
+.nav .content ul {
+  margin: 0 auto;
+  display: inline-block;
+}
+
+.nav .content ul li {
+  width: 100px;
+  float: left;
+}
+
+.nav .content ul li a {
+  line-height: 40px;
+}
+
+.nav .content .right {
+  float: right;
+  line-height: 40px;
+}
+
+.nav .content .right a:hover {
+  color: #fea700 !important;
+}
+
+.nav a:hover {
+  color: #19bebe;
+}
+
+.left img, .right img {
+  position: relative;
+  top: 5px;
+  margin-right: 3px;
+}
+
+.user {
+  float: left;
+  width: 200px;
+  background-color: #f0f0f0;
+  margin-top: 30px;
+}
+
+.user ul {
+  margin-bottom: 20px;
+}
+
+.user ul li {
+  padding: 0 45px;
+  box-sizing: border-box;
+  border-left: 2px solid transparent;
+}
+
+.user ul li:hover {
+  border-left-color: #19bebe;
+  background-color: #ccc;
+}
+
+.user .title {
+  line-height: 30px;
+  font-weight: bold;
+  font-size: 14px;
+  position: relative;
+}
+
+.user .title i {
+  position: absolute;
+  left: 21px;
+  cursor: pointer;
+}
+
+.user a {
+  line-height: 30px;
+}
+
+.user > a {
+  margin-left: 45px;
+}
+
+.user > a:first-of-type {
+  line-height: 70px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.box {
+  width: 790px;
+  height: 781px;
+  margin-top: 30px;
+  margin-left: 10px;
+  float: left;
+  background-color: #f0f0f0;
+}
+
+/*-------------------iframe部分-----------------*/
+.box iframe {
+  width: 100%;
+  height: 400px;
+}
+
+.userframe {
+  height: 179px;
+  background-color: #ededed;
+}
+
+.user-left {
+  float: left;
+  position: relative;
+  font-size: 14px;
+}
+
+.user-left img {
+  position: absolute;
+  left: 31px;
+  top: 30px;
+}
+
+.user-left p {
+  margin-left: 157px;
+}
+
+.user-left p:first-of-type {
+  font-size: 16px;
+  margin-top: 42px;
+  margin-bottom: 15px;
+}
+
+.user-right {
+  float: left;
+  position: relative;
+}
+
+.user-right img {
+  position: absolute;
+}
+
+.user-right img:first-of-type {
+  top: 60px;
+  left: 5px;
+}
+
+.user-right img:last-of-type {
+  top: 60px;
+  left: 170px;
+}
+
+.user-right p {
+  margin-left: 53px;
+}
+
+.user-right p:first-of-type {
+  margin-top: 60px;
+}
+
+.user-right p:first-of-type span {
+  margin-right: 114px;
+}
+
+.user-right p:last-of-type span {
+  margin-right: 78px;
+}
+
+.user-right p a {
+  color: #19bebe;
+}
+
+.userframe > span {
+  display: block;
+  float: left;
+  width: 1px;
+  height: 100px;
+  background-color: #bdc3c7;
+  margin: 30px 30px 0 80px;
+}
+
+/*-------------iframe修改密码部分---------------*/
+.changebox {
+  background-color: #ededed;
+  height: 350px;
+}
+
+.changebox .top {
+  margin-top: 30px;
+  margin-left: 100px;
+  border-left: 3px solid #19bebe;
+  padding-left: 40px;
+  line-height: 40px;
+  font-size: 16px;
+}
+
+.changebox .dash {
+  height: 1px;
+  border-bottom: 1px dashed #bdc3c7;
+}
+
+.changebox .phone, .changebox .weixin {
+  width: 500px;
+  height: 75px;
+  margin-top: 20px;
+  margin-left: 100px;
+  padding-top: 10px;
+  padding-left: 30px;
+  background-color: #fff;
+  position: relative;
+  border: 2px solid #bdc3c7;
+  font-size: 14px;
+}
+
+.changebox .phone img, .changebox .weixin img {
+  position: absolute;
+  top: 13px;
+}
+
+.changebox .phone p, .changebox .weixin p {
+  margin-left: 54px;
+}
+
+.changebox .phone p:first-of-type, .changebox .weixin p:first-of-type {
+  margin-top: 7px;
+}
+
+.changebox .phone input, .changebox .weixin input {
+  width: 100px;
+  height: 40px;
+  color: #fff;
+  background-color: #fea700;
+  position: absolute;
+  top: 16px;
+  right: 50px;
+  border: none;
+  outline: none;
+}
+
+.changebox .weixin {
+  margin-top: 30px;
+}
+
+.changebox .weixin img {
+  top: 21px;
+}
+
+/*-----------bottom---------*/
+.bottom {
+  background-color: #505050;
+  margin-top: 50px;
+  color: #fff;
+}
+
+.bottom .b-logo {
+  height: 38px;
+  width: 128px;
+  margin: 20px 0 5px 10px;
+  background: url(../images/footerLogo.png) no-repeat center center;
+}
+
+.bottom .aboutus {
+  float: left;
+}
+
+.bottom .aboutus p {
+  margin-left: 10px;
+}
+
+.bottom .aboutus p:first-of-type {
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.bottom ul {
+  float: left;
+}
+
+.bottom ul li:not(:first-of-type) {
+  margin-top: 13px;
+}
+
+.bottom ul li a {
+  color: #d6d6d6;
+}
+
+.bottom .guanyu {
+  margin-left: 162px;
+}
+
+.bottom .banquan {
+  margin-left: 105px;
+  margin-right: 155px;
+}
+
+.bottom .tubiao li:not(:first-of-type) {
+  margin-top: 3px !important;
+}
+
+.bottom .tubiao img {
+  position: relative;
+  top: -3px;
+  left: -9px;
+}
+
+.bottom .solid {
+  clear: both;
+  height: 1px;
+  background-color: #d6d6d6;
+  margin-top: 100px;
+}
+
+.bottom > .content > p {
+  line-height: 50px;
+  color: #d6d6d6;
+}
+
+.bottom > .content > p:nth-of-type(2) {
+  float: left;
+  margin-left: 10px;
+}
+
+.bottom > .content > p:nth-of-type(3) {
+  float: right;
+  margin-right: 10px;
+}

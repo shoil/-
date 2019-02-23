@@ -1,0 +1,150 @@
+.bottom {
+    position: relative;
+    top: 50px;
+    width: 100%;
+    overflow: hidden;
+    background: #fafafa;
+  }
+  
+  .bottom .bottom-top {
+    width: 1240px;
+    height: 154px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .bottom .bottom-top div {
+    width: 248px;
+  }
+  
+  .bottom .bottom-top div img {
+    padding-top: 40px;
+  }
+  
+  .bottom .bottom-top div p {
+    padding-top: 80px;
+  }
+  
+  .bottom-container {
+    width: 1240px;
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .bottom-container .bottom-div {
+    position: absolute;
+    top: 40px;
+    width: 950px;
+  }
+  
+  .bottom-container .bottom-div .bottom-ul {
+    width: 20%;
+    height: 120px;
+    position: relative;
+  }
+  
+  .bottom-container .bottom-div .bottom-ul h4 {
+    padding: 5px 0px 13px 0px;
+    color: #322e2d;
+  }
+  
+  .bottom-container .bottom-div .bottom-ul ul li {
+    padding: 0px 5px;
+    width: 100%;
+  }
+  
+  .bottom-container .bottom-div .bottom-ul ul li a {
+    font-size: 12px;
+    color: #7d8993;
+  }
+  
+  .bottom-container .bottom-div .bottom-ul::before {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 100%;
+    border-right: 1px solid #e0e0e0;
+    left: 150px;
+    top: 0px;
+  }
+  
+  .bottom-container .bottom-div .telephone {
+    position: absolute;
+    left: 1030px;
+    width: 180px;
+    height: 120px;
+  }
+  
+  .bottom-container .bottom-div .telephone h4 {
+    padding-top: 10px;
+  }
+  
+  .bottom-container .bottom-div .telephone p {
+    font-size: 14px;
+    color: #7d8993;
+  }
+  
+  .bottom-container .bottom-div .telephone .phone-24 {
+    position: absolute;
+    top: 80px;
+    left: 30px;
+    width: 120px;
+    line-height: 30px;
+    color: white;
+    background: #ff4900;
+  }
+  
+  .bottom-annotation {
+    position: relative;
+    margin-top: 35px;
+    margin-bottom: 70px;
+    width: 1240px;
+  }
+  
+  .bottom-annotation .bottom-annotation-one {
+    overflow: hidden;
+    width: 900px;
+  }
+  
+  .bottom-annotation .bottom-annotation-one a {
+    font-size: 14px;
+    color: #322e2d;
+  }
+  
+  .bottom-annotation p {
+    font-size: 14px;
+    color: #322e2d;
+  }
+  
+  .bottom-image {
+    position: relative;
+    height: 80px;
+    top: 15px;
+    clear: both;
+  }
+  
+  .bottom-image img {
+    position: absolute;
+    top: 10px;
+    left: 460px;
+  }
+  
+  .bottom-image form {
+    position: absolute;
+  }
+  
+  .bottom-image form select {
+    width: 200px;
+    height: 40px;
+    position: absolute;
+    left: 650px;
+    background: white;
+    color: #7d8993;
+    border: 1px solid #e0e0e0;
+  }
+  .mi-bottom{
+    height: 476px;
+    width: 100%;
+}

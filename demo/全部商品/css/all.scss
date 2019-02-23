@@ -1,0 +1,32 @@
+.all-title {
+    font-size: 20px;
+}
+.all-sort {
+    margin-top: 15px;
+    border-top: 1px solid #aaa;
+    >li {
+        box-sizing: border-box;
+        float: left;
+        height: 380px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding-left: 25px;
+        &:not(:last-of-type) {
+            border-right: 1px solid #ccc;
+        }
+        li {
+            a { 
+                color: #aaa;
+                font-size: 13px;
+                line-height: 28px;
+            }
+            &:nth-of-type(1) {
+                text-align: center;
+            }
+            &:nth-of-type(2) {
+                margin-top: 20px;
+                a { color: black; }
+            }
+        }
+    }
+}

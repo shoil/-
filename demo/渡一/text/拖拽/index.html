@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        #div1 {
+            width: 200px;
+            height: 200px;
+            background: #71e4ff;
+            position: absolute;
+            left: 200px;
+            top: 200px;
+        }
+
+        .t {
+
+            width: 100%;
+            height: 20px;
+            background: #faa2d3;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+
+        .r {
+            height: 100%;
+            width: 20px;
+            background: #faa2d3;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+        }
+
+        .b {
+            width: 100%;
+            height: 20px;
+            background: #faa2d3;
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+        }
+
+        .l {
+            height: 100%;
+            width: 20px;
+            background: #faa2d3;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+
+        .lt {
+            width: 20px;
+            height: 20px;
+            background: red;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+
+        .lb {
+            width: 20px;
+            height: 20px;
+            background: red;
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+        }
+
+        .rt {
+            width: 20px;
+            height: 20px;
+            background: red;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+        }
+
+        .rb {
+            width: 20px;
+            height: 20px;
+            background: red;
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div1">
+
+        <div class="t"></div>
+        <div class="r"></div>
+        <div class="b"></div>
+        <div class="l"></div>
+
+        <div class="lt"></div>
+        <div class="lb"></div>
+        <div class="rt"></div>
+        <div class="rb"></div>
+    </div>
+
+
+    <script>
+
+
+        window.onload = function () {
+            var box = document.getElementById("div1");
+            // document.write(box);
+            var aDiv = box.getElementsByTagName("div");
+            for (var i = 0; aDiv.length; i++) {
+                drag(aDiv[i]);
+            }
+            //封装一个拖拽函数(设置一个参数为前要拖拽的对象)
+            function drag(obj) {
+                //当鼠标在当前区域按下时
+                obj.onmousedown = function (ev) {
+                    //当前物体的宽高
+                    oPreW = box.offsetWidth;
+                    oPreH = box.offsetHeight;
+                    //当前物体父级元素定位左边和顶部的高度
+                    oPreL = box.offsetLeft;
+                    oPreT = box.offsetTop4;
+                    //当前事件点离可是高度的距离
+                    oPreX = oEvent.clientX;
+                    console.log(this.oPreX);
+                    oPreY = oEvent.clientY;
+                    console.log(this.clientY);
+                    document.onmousemove = function (ev) {
+                        var oEvent = ev || event;
+                        if (obj.className.indexOf("t") != -1) {
+                            var oChaY = oPreY - oEvent.clientY;
+                            box.style.height = oPreH + oChaY + "px";
+                            box.style.top = oPreT - oChaY + "px";
+                        }
+
+                        if (obj.className.indexOf("r") != -1) {
+                            var oChaX = oEvent.clientX - oPrex;
+                            box.style.width = oPrew + oChax + "px";
+                            // box.style.top = oPreT - oChaY + "px";
+                        }
+                        if (obj.className.indexOf("b") != -1) {
+                            var oChaY = oEvent.clientY - oPreY;
+                            box.style.height = oPreH + oChaY + "px";
+                            // box.style.top = oPreT - oChaY + "px";
+                        }
+                        if (obj.className.indexOf("l") != -1) {
+                            var oChaX = oPreX - oEvent.clientX;
+                            box.style.width = oPreW + oChaX + "px";
+                            box.style.left = oPreL - oChaX + "px";
+                        }
+                        document.onmousemove = function () {
+                            document.onmousemove = null;
+                            document.onmouseup = null;
+                        }
+                        return false;
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

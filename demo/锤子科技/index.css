@@ -1,0 +1,335 @@
+@charset "UTF-8";
+body {
+  background: rgba(239, 249, 239, 0.8);
+}
+
+.nav {
+  width: 100%;
+}
+
+.back {
+  width: 100%;
+  background: black;
+}
+
+.nav-top {
+  width: 1120px;
+  height: 100px;
+  background: black;
+  position: relative;
+}
+
+.nav-top img {
+  float: left;
+  position: relative;
+  left: 0;
+  top: 30px;
+}
+
+.nav-top .nav-top-ul {
+  float: left;
+  position: relative;
+  top: 30px;
+  left: 200px;
+}
+
+.nav-top .nav-top-ul li {
+  margin-left: 10px;
+}
+
+.nav-top .nav-top-ul a {
+  color: #eff9ef;
+}
+
+.nav-top .nav-top-ul a:hover {
+  color: #272727;
+}
+
+.nav-top .login {
+  width: 90px;
+  height: 21px;
+  border: 1px solid white;
+  position: absolute;
+  top: 30px;
+  left: 980px;
+}
+
+.nav-top .login a {
+  height: 21px;
+  color: white;
+}
+
+.nav-bottom {
+  width: 1120px;
+  height: 100px;
+}
+
+.nav-bottom ul {
+  color: #646464;
+  line-height: 100px;
+}
+
+.nav-bottom ul li {
+  margin-right: 20px;
+}
+
+.nav-bottom ul li a {
+  color: #272727;
+}
+
+.nav-bottom ul li .a-text {
+  font-weight: bold;
+}
+
+.nav-bottom .card {
+  float: right;
+  height: 100%;
+  line-height: 100px;
+}
+
+.nav-bottom .card a img {
+  widows: 23px;
+  height: 23px;
+}
+
+.nav-bottom .card i {
+  position: relative;
+}
+
+.nav-bottom .card .drop-content {
+  display: none;
+}
+
+.nav-bottom .card:hover div {
+  position: absolute;
+  margin-top: -20px;
+  left: -245px;
+  display: block;
+  height: 200px;
+  width: 300px;
+  content: "购物车";
+  background: white;
+  border-radius: 5px;
+}
+
+.nav-bottom .card:hover div .a-text {
+  color: #e6e6e6;
+  font-size: 14px;
+}
+
+.nav-bottom .card:hover div::before {
+  display: block;
+  content: "";
+  position: absolute;
+  border-bottom: 500px solid red;
+}
+
+.container {
+  width: 1220px;
+}
+
+.container .container-image {
+  width: 1220px;
+  height: 501xp;
+  border-radius: 8xp;
+}
+
+.container .container-generalize {
+  border: 1px solid #e6e6e6;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.container .container-generalize div {
+  height: 200px;
+  width: 304px;
+  box-sizing: border-box;
+}
+
+.container .container-generalize div:not(:first-child) {
+  border-left: 1px solid #d1f9d1;
+}
+
+.container-hot {
+  overflow: hidden;
+  border: 1px solid #e6e6e6;
+  margin-bottom: 30px;
+}
+
+.container-hot .container-hot-heat {
+  width: 1220px;
+  height: 61px;
+  background: white;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.container-hot .container-hot-heat h1 {
+  transform: translateY(10px);
+}
+
+.container-hot .container-hot-goods div {
+  font-size: 14px;
+  background: white;
+  position: relative;
+  width: 25%;
+  height: 430px;
+  overflow: hidden;
+}
+
+.container-hot .container-hot-goods div ul .image-goods {
+  height: 205.9px;
+  height: 205.9px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.container-hot .container-hot-goods div ul .image-goods .li-height {
+  border: 5px solid white;
+}
+
+.container-hot .container-hot-goods div ul .image-dot {
+  display: block;
+  box-sizing: border-box;
+  width: 9px;
+  height: 9px;
+  border: 2px solid white;
+  border-radius: 3px;
+}
+
+.container-hot .container-hot-goods div:hover .input-button {
+  color: darkgrey;
+  display: block;
+  width: 100%;
+  height: 20px;
+  position: absolute;
+  top: 394px;
+  left: 90px;
+}
+
+.container-selection {
+  overflow: hidden;
+  border: 1px solid #e6e6e6;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.container-selection .container-selection-heat {
+  width: 1220px;
+  height: 61px;
+  background: white;
+  overflow: hidden;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.container-selection .container-selection-heat h1 {
+  transform: translateY(10px);
+}
+
+.container-selection .container-selection-goods .selection-image {
+  width: 50%;
+  height: 430px;
+  float: left;
+}
+
+.container-dynamic {
+  width: 1220px;
+  height: 260px;
+  overflow: hidden;
+}
+
+.container-border {
+  overflow: hidden;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.container-heat {
+  width: 100%;
+  height: 60px;
+  background: white;
+  overflow: hidden;
+  border-top: 1px solid #e6e6e6;
+  border-right: 1px solid #e6e6e6;
+  border-left: 1px solid #e6e6e6;
+}
+
+.container-heat h1 {
+  line-height: 60px;
+}
+
+.container-dynamic-div {
+  border: 1px solid #e6e6e6;
+  overflow: hidden;
+}
+
+.container-dynamic-div div {
+  height: 200px;
+  width: 304px;
+  float: left;
+  box-sizing: border-box;
+}
+
+.container-dynamic-div div:not(:first-child) {
+  border-left: 1px solid #d1f9d1;
+}
+
+.container-app-div {
+  border: 1px solid #e6e6e6;
+  overflow: hidden;
+}
+
+.container-app-div div {
+  height: 354px;
+  width: 304px;
+  float: left;
+  position: relative;
+  background: white;
+  box-sizing: border-box;
+}
+
+.container-app-div div .hidden {
+  display: none;
+}
+
+.container-app-div div:hover .hidden {
+  position: absolute;
+  display: block;
+  height: 354px;
+  width: 304px;
+  margin-top: -290px;
+  background: #646464;
+}
+
+.container-app-div div:not(:first-child) {
+  border-left: 1px solid #d1f9d1;
+}
+
+.container-app-div div a {
+  display: block;
+}
+
+.container-app-div div a .app-image-one {
+  margin-top: 90px;
+}
+
+.container-app-div div a h4 {
+  color: black;
+  margin-top: 40px;
+}
+
+.container-app-div div a p {
+  width: 244px;
+  height: 30px;
+  color: #5a5e5e;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.container-app-div div a .app-image-two {
+  transform: translateY(35px);
+}
+
+.box-shadow:hover {
+  box-shadow: 0px 0px 10px 5px #e6e6e6 inset;
+}

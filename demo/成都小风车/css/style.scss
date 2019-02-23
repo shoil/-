@@ -1,0 +1,295 @@
+$c-blue: #4695dd;
+$shadow: 0 0 1px 0 rgba(0, 0, 0, .1);
+
+
+#nav {
+    background: #fff;
+    width: 100%;
+    z-index: 999;
+}
+.navbar-default {
+    background-color: #fff;
+    border: none;
+    margin-bottom: 0;
+    // box-sizing: border-box;
+    #logo {
+        padding: 0;
+        height: 64px;
+        width: 335px;
+    }
+    #nav-right {
+        a { 
+            line-height: 64px;
+            font-size: 16px;
+            padding: 0 20px;
+            transition: all .7s;
+            &:hover {
+                background-color: $c-blue;
+                color: #fff;
+            }
+        }
+    }
+    .code {
+        // >a {
+        //     &:hover ~ i {
+        //         display: block;
+        //     }
+        // }
+        position: relative;
+        >i {
+            position: absolute;
+            top: 64px;
+            right: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: $shadow;
+            display: none;
+            z-index: 999;
+            // img { width: 60%; }
+        }
+    }
+}
+
+/*-------------lunbotu----------*/
+#carousel-id .item {
+    opacity: 0;
+    transition: opacity ease-in-out .5s;
+}
+#carousel-id .active {
+    opacity: 1 !important;
+    transition: opacity ease-in-out .5s;
+}
+.fccaption {
+    top: -220px;
+    h1 { font-size: 48px; }
+}
+.fc-bg {
+    height: 767px;
+    background: url(../images/ppt_bg.jpg) no-repeat center center;
+    #carousel-id {
+        .fc_ppt {
+            img {
+                margin: 288px auto 0 auto;
+            }
+        }
+    }
+}
+.left, .right {
+    background-image: none !important;
+}
+
+//sever
+.service {
+    text-align: center;
+    margin-top: 50px;
+    &::before {
+        display: table;
+        content: "";
+    }
+    >h1 {
+        color: $c-blue;
+    }
+    >span {
+        height: 2px;
+        width: 80px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: $c-blue;
+    }
+}
+.serve {
+    margin-top: 100px;
+    height: 450px;
+    >div {
+        text-align: center;
+        // height: 269px;
+        >img{width: 120px;height: 120px;}
+        >h1 { margin-top: 30px; }
+        >p {
+            &:first-of-type { margin-top: 15px; }
+        }
+    }
+}
+
+.productshow {
+    background-color: #f1f5f8;
+    &::before {
+        display: table;
+        content: "";
+    }
+}
+.product {
+    @extend .service;
+    text-align: center;
+}
+
+.show {
+    margin-top: 70px;
+    >div { padding: 0 15px; }
+    .pr { 
+        margin: 0 20px 30px 0;
+        box-shadow: $shadow;
+     }
+    .pr {
+        position: relative;
+        box-sizing: border-box;
+        padding: 10px;
+        height: 80%;
+        background-color: #fff; 
+        img { width: 100%; }
+        p {
+            text-align: start;
+            margin-left: 10px;
+            margin-bottom: 4px;
+            &:first-of-type { 
+                font-size: 16px;
+                margin-top: 10px;
+             }
+            &:last-of-type { 
+                font-style: italic;
+                color: #ccc;
+             }
+        }
+        &:hover {
+            .cover { display: block; }
+        }
+    }
+}
+.cover {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, .5);
+    display: none;
+}
+
+.customer {
+    @extend .service;
+    text-align: center;
+    >span {
+        margin-bottom: 70px;
+    }
+    >div>div{
+        position: relative;
+        margin-bottom: 40px;
+        @for $i from 1 to 5 {
+            &:nth-of-type(#{$i}){
+            >.customer-bg { background: #f1f5f8 url(../images/client#{$i}.png) no-repeat center center; }    
+            }
+        }
+        &:hover {
+            .cover { display: block; }
+        }
+    }
+    >div>div>div {
+        height: 88px;
+        // width: 245.5px;
+        &:not(:last-of-type){
+            margin-right: 20px;
+        }
+    }
+    // >div>div{
+    //     margin-bottom: 40px;
+    //     @for $i from 1 to 5 {
+
+    //     }
+    // }
+}
+.aboutus {
+    @extend .service;
+    height: 640px;
+    width: 100%;
+    color: #fff;
+    font-size: 16px;
+    margin-top: 100px;
+    h1 { 
+        color: #fff;
+        margin-top: 85px;
+    }
+    span { background-color: #fff; }
+    
+    p {
+        margin-top: 10px;
+        &:first-of-type { margin-top: 70px !important; }
+    }
+    background: url(../images/about_bg.jpg) no-repeat center center;
+}
+
+.contact {
+    // height: 242px;
+    // margin-top: 100px;
+    background: #626160 url(../images/content_bg.png) no-repeat center center;
+    &::before {
+        display: table;
+        content: "";
+    }
+    >div {
+        text-align: center;
+        >img {
+            margin-top: 70px;
+        }
+        >p {
+            color: #fff;
+            font-size: 16px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            line-height: 82px;
+        }
+    }
+}
+
+.bottom {
+    font-size: 16px;
+    color: #ccc;
+    text-align: center;
+    line-height: 100px;
+}
+
+/*-------------------js动画----------------*/
+.sidebar {
+    position: fixed;
+    top: 250px;
+    right: 0;
+    width: 30px;
+    height: 117px;
+    background: $c-blue url(../images/sidebar_bg.png) no-repeat -117px 5px;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    // box-shadow: $shadow;
+    border-bottom: 1px solid #ccc;
+}
+.select {
+    background-color: $c-blue;
+    color: #fff !important;
+    a {
+        color: inherit !important;
+    }
+}
+
+
+/*-------------------响应式---------------*/
+@media(min-width: 992px){
+    .col-md-2dot4 { 
+        width: 20%;
+        float: left;
+    }
+}
+@media(min-width: 1220px){
+    #logo {
+        background: url(../images/logo.png) no-repeat center center;
+    }
+}
+@media(max-width: 1220px){
+    #logo {
+        background: url(../images/logo_min.png) no-repeat left center;
+        width: 121px !important;
+    }
+}
+

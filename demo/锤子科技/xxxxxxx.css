@@ -1,0 +1,95 @@
+.nav {
+  width: 100%;
+  height: 100px;
+  background: black;
+}
+
+.nav-content {
+  width: 1120px;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.logo {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  top: 25px;
+  margin-right: 200px;
+  float: left;
+}
+
+.nav-content ul {
+  width: 642px;
+  height: 59px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  float: left;
+}
+
+.nav-content ul li {
+  list-style: none;
+  float: left;
+  margin: 10px;
+  margin-top: 30px;
+}
+
+.nav-content ul a {
+  text-decoration: none;
+  color: #cbd1cb;
+}
+
+.nav-content ul a:hover {
+  color: aliceblue;
+}
+
+.login {
+  width: 88px;
+  height: 27px;
+  border: 1px solid white;
+  position: absolute;
+  left: 950px;
+  top: 38px;
+}
+
+.login a {
+  color: white;
+  line-height: 27px;
+  text-align: center;
+  text-decoration: none;
+}
+
+
+.nav-bottom-centent{
+  width: 1220px;
+  height: 90px;
+  margin-left: 0px;
+  margin-right: 0px;
+
+}
+
+.nav-bottom-content li{
+  list-style: none;
+  float: left;
+  margin-right:25px;
+
+}
+    
+.nav-bottom-content a{
+  line-height:90px;
+  text-decoration: none;
+  color:rgb(89, 89, 89);
+}
+
+
+.nav-bottom-content a:hover{
+  color: rgb(203, 209, 203)；
+}
+
+.nav-bottom{
+  width:100%;
+}
+

@@ -1,0 +1,116 @@
+@import "style.scss";
+$c-fgray: #b4b4b4;
+
+.content {
+    margin-top: 30px;
+}
+.banner {
+    width: 950px;
+    height: 270px;
+    float: left;
+    // overflow: hidden;
+    background: url("../images/mshanghai4.7.jpg") no-repeat center center;
+}
+.sidebar {
+    float: left;
+    width: 204px;
+    border: 1px solid #ccc;
+    height: 270px;
+    padding-left: 20px;
+    padding-top: 15px;
+    margin-left: 15px;
+}
+.charge {
+    >form{
+        >p {
+            &:first-of-type {
+                font-size: 14px;
+                line-height: 28px;
+            }
+            &:last-of-type {
+                font-size: 12px;
+                line-height: 45px;
+                color: $c-fgray;
+                b { font-size: 14px; }
+            }
+        }
+        >input {
+            height: 40px;
+            width: 150px;
+            border: 1px solid #ccc;
+            &:first-of-type {
+                margin-bottom: 30px;
+            }
+            &:last-of-type {
+                background-color: $c-fgray;
+                color: #fff;
+                outline: none;
+                cursor: pointer;
+            }
+        }
+        >select {
+            height: 40px;
+            width: 150px;
+        }
+    }
+}
+.phone {
+    width: 950px;
+    // height: 110px;
+    border: 1px solid #ccc;
+    margin-top: 15px;
+    float: left;
+    .sort {
+        text-align:  center;
+        background-color: $c-gray;
+        border-bottom: 1px solid #ccc;
+        img {
+            margin: 15px auto;
+        }
+        li {
+            box-sizing: border-box;
+            margin-bottom: -1px;
+            &:not(:last-of-type) {
+                border-right: 1px solid #ccc;
+            }
+            p { margin-bottom: 10px; }
+        }
+        .select {
+            background-color: #fff;
+        }
+    }
+    .row-one {
+        padding: 30px;
+        li {
+            line-height: 26px;
+            text-align: center;
+            a {
+                padding: 4px 10px;
+                color: #fff;
+                background-color: red;
+            }
+            .blue {
+                background-color: #03519c;
+            }
+        }
+    }
+    .row-two {
+        @extend .row-one;
+        li:not(:nth-of-type(2)){
+            opacity: .5;
+        }
+    }
+}
+.code {
+    float: left;
+    margin-top: 15px;
+    .sign {
+        @extend .sidebar;
+        float: none;
+        height: initial;
+        padding: 20px;
+        p { line-height: 30px; }
+        &:last-of-type { margin-top: 15px; }
+    }
+}
+

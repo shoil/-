@@ -1,0 +1,149 @@
+@import "style.scss";
+$c-brown: #432501;
+.nav-bar {
+    height: 30px;
+    line-height: 30px;
+    margin-top: 15px;
+    span {
+        &:first-of-type { font-size: 14px; }
+        &:nth-of-type(2) {
+            margin: 0 5px;
+        }
+    }
+    ul {
+        float: right;
+        // margin-right: 100px;
+        li {
+            float: left;
+            margin-right: 15px;
+            &:not(:last-of-type) {
+                a { &:hover { color: $c-mi; } }
+            }
+            &:last-of-type {
+                margin-right: 0;
+                >a {
+                    float: right;
+                    display: block;
+                    padding: 0px 30px;
+                    background-color: $c-mi;
+                    color: #fff;
+                }
+            }
+        }
+    } 
+}
+.banner1 {
+    text-align: center;
+    position: relative;
+    height: 917px;
+    background: url("../images/hezi.png") no-repeat -212px 0;
+    >img {
+        &:first-of-type {
+            position: absolute;
+            left: 264px;
+            top: 50px;
+        }
+    }
+    h1 {
+        margin-top: 85px;
+        font-size: 60px;
+    }
+    p {
+        font-size: 20px;
+        margin-top: 15px;
+        color: #aaa;
+    }
+    span {
+        display: inline-block;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-size: 50px;
+        color: $c-mi;
+    }
+    i {
+        font-size: 20px;
+        margin-left: 3px;
+        font-style: normal;
+    }
+    a {
+        color: #fff;
+        font-size: 20px;
+        padding: 10px 35px;
+        background-color: $c-mi;
+        border-radius: 5px;
+    }
+}
+.banner2 {
+    @extend .banner1;
+    background: url("../images/hz-24.jpg") no-repeat -568px 0;
+}
+.banner3 {
+    @extend .banner1;
+    height: 970px;
+    background: url("../images/jihe.png") no-repeat center -10px;
+    // p { color: $c-brown; }
+}
+.banner4 {
+    height: 1250px;
+    background: url(../images/dianying.png) no-repeat center 0;
+}
+.banner5 {
+    height: 970px;
+    background: url(../images/jiating.png) no-repeat center 0;
+}
+.banner6 {
+    @extend .banner1;
+    background-color: #fcfcfc !important;
+    width: 100%;
+    // background-color: #000 !important;
+    height: 720px;
+    text-align: center;
+    background: none;
+}
+.hz-about {
+    background-color: #fcfcfc;
+    li {
+        float: left;
+        text-align: center;
+        height: 200px;
+        box-sizing: border-box;
+        
+        &:not(:last-of-type) {
+            border-right: 1px solid #ccc;
+
+        }
+        img {
+            margin-top: 60px;
+        }
+        p {
+            font-size: 20px;
+            margin-top: 10px;
+            color: #aaa;
+        }
+    }
+}
+.goods {
+    margin-top: 20px;
+    margin-bottom: 70px;
+    >div {
+        text-align: center;
+        height: 435px;
+        &:not(:last-of-type) { border-right: 1px solid #ccc; }
+        img {
+            margin-top: 28px;
+        }
+        >p {
+            font-size: 20px;
+            &:nth-of-type(1) {
+                line-height: 50px;
+            }
+            &:nth-of-type(2) {
+                color: #aaa;
+            }
+            &:nth-of-type(3) {
+                color: $c-mi;
+                margin-top: 20px;
+            }
+        }
+    }
+}

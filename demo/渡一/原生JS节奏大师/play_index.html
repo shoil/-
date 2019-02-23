@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>原生JS节奏大师</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .top_index {
+            width: 100%;
+            height: 900px;
+            background-image: url("D:/练习项目/原生JS节奏大师/img/fengmian.jpg");
+            background-size: 100% 100%;
+            position: absolute;
+            /* display: none; */
+        }
+
+        .top_index .game_name {
+            width: 100%;
+            height: 90px;
+            font-size: 70px;
+            color: aqua;
+            position: absolute;
+            top: 150px;
+            text-indent: 4em;
+            font-family: monospace;
+        }
+
+        .top_index .level {
+            position: absolute;
+            top: 250px;
+            left: 150px;
+        }
+
+        .top_index .level li {
+            width: 150px;
+            height: 90px;
+            background-color: rgb(135, 222, 135);
+            margin: 10px;
+            font-size: 47px;
+            line-height: 90px;
+            text-align: center;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 1.5s ease-in-out;
+        }
+
+        .top_index .level .level1 {
+            color: #ffffff;
+        }
+
+        .top_index .level .level2 {
+            color: rgba(200, 255, 0, 0.952);
+        }
+
+        .top_index .level .level3 {
+            color: #f40;
+        }
+
+        .top_index .startBtn {
+            width: 330px;
+            height: 289px;
+            background: linear-gradient(to bottom, rgb(130, 204, 238), red);
+            position: absolute;
+            top: 260px;
+            left: 340px;
+            border-radius: 20px;
+            line-height: 289px;
+            text-align: center;
+            font-size: 70px;
+            color: rgb(255, 127, 217);
+            cursor: pointer;
+        }
+        /* 游戏界面区 */
+        .wrapper{
+            width: 100%;
+            height: 900px;
+            position: relative;
+            display: none;
+        }
+        /* 初级难度样式 */
+        .wrapper .esGame{
+            width: 100%;
+            height: 900px;
+            /* background-image: url("D:/练习项目/原生JS节奏大师/img/H.jpg"); */
+            background-image: url("D:/练习项目/原生JS节奏大师/img/timg.jpg");
+            background-size: 100% 100%;
+            position: absolute;
+        }
+        .wrapper .esGame .esGame_window{
+            width: 1007px;
+            height: 796px;
+            border: solid 1.5px rgba(0, 0, 0, 0.747);
+            position: absolute;
+            overflow: hidden;
+        }
+        .wrapper .esGame .esGame_window .time{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-color: rgba(0,0,0,0.3);
+            font-size: 120px;
+            color: rgb(255, 0, 119);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 900;
+            text-align: center;
+            line-height: 500px;
+            z-index: 9999;
+            
+        }
+        .wrapper .esGame .esGame_window .playerHP{
+            width: 280px;
+            height: 45px;
+            border: solid 1.6px gold;
+            color: red;
+            margin-top: 15px;
+            border-radius: 6px 30px 30px 6px;
+            overflow: hidden;
+            display: inline-block;
+        }
+        .wrapper .esGame .esGame_window .playerHP li{
+            width: 280px;
+            height: 45px;
+            background: linear-gradient(to bottom, rgb(130, 238, 215), red);
+            float: left;
+            margin-right: 4px;
+        }
+        .wrapper .esGame .esGame_window .scorebd{
+            width: 224px;
+            height: 45px;
+            float: right;
+            margin-top: 4px;
+            border: #ffffff38 2px solid;
+        }
+        .wrapper .esGame .esGame_window .scorebd .score{
+            width: 150px;
+            height: 45px;
+            color: rgb(0, 255, 0);
+            font-size: 40px;
+            font-weight: 800;
+            line-height: 45px;
+            text-align: center;
+        }
+        .wrapper .esGame .esGame_window .scorebd .startAndStop{
+            width: 50px;
+            height: 45px;
+            float: right;
+            text-align: center;
+            font-size: 40px;
+            font-weight: 800;
+            line-height: 45px;
+            background-color: rgb(200, 255, 127);
+            border-radius: 10px;
+        }
+        .wrapper .esGame .esGame_window .content{
+            width: 602px;
+            height: 934px;
+            transform: perspective(800px) rotateX(45deg);
+            background: rgba(0, 0, 0, 0.223);
+            margin-top: -298px;
+            margin-left: 201px;
+            border: solid 3px #ffffff;
+            outline: rgba(0, 0, 0, 0.233) solid 1.3px;
+        }
+        .wrapper .esGame .esGame_window .content ul{
+            width: 602px;
+            height: 934px;
+        }
+        .wrapper .esGame .esGame_window .funmein{
+            width: 130px;
+            /* height: 146px; */
+            border: solid 1px #ffffffa4;
+            position: absolute;
+            right: 0;
+            top: 52px;
+            transition: all 0.6s ease-in;
+        }
+        .wrapper .esGame .esGame_window .funmein li{
+            transition: all 0.8s ease-in;
+            display: none;
+            width: 100%;
+            height: 25%;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.301);
+            text-align: center;
+            font-size: 20px;
+            line-height: 35px;
+            color: #ffffffe3;
+            font-weight: 900;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            cursor: pointer;
+        }
+        .wrapper .esGame .esGame_window .funmein li:hover{
+            background-color: #ffffff67;
+        }
+        .wrapper .esGame .esGame_window .content b{
+            /* display: none; */
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -200px;
+            margin-top: -100px;
+            width: 400px;
+            height: 200px;
+            font-size: 80px;
+            text-align: center;
+            line-height: 200px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-shadow: #ffffff 2px 2px;
+        }
+        .wrapper .esGame .esGame_window .content ul button{
+            width: 96px;
+            position: absolute;
+            bottom: 0;
+            height: 65px;
+            background: linear-gradient(to bottom, #ffffff, rgba(0, 0, 0, 0.096),rgba(0, 0, 0, 0.329),rgba(0, 0, 0, 0.493),rgba(0, 0, 0, 0.151));
+            border: solid 2px #ffffff;
+            border-radius:  0 0 15px 15px;
+            color: #fffffff6;
+            font-size: 40px;
+        }
+        .wrapper .esGame .esGame_window .content ul .gamebtn{
+            width: 98px;
+            height: 934px;
+            border-right: #ffffff50 2px solid;
+            float: left;
+            margin-top: -228px;
+            overflow: hidden;
+            border-radius:  0 0 15px 15px;
+            /* background: linear-gradient(to bottom,#3a9c5a52,#1b76c01a,#dd13ccd7); */
+        }
+        .wrapper .esGame .esGame_window .content ul .change_gamebtn{
+            width: 98px;
+            height: 934px;
+            border-right: #ffffff50 2px solid;
+            float: left;
+            margin-top: -228px;
+            overflow: hidden;
+            background-color: #f40;
+            opacity: 0.7;
+        }
+        .wrapper .esGame .esGame_window .content ul .gamebtn .randomBox{
+            width: 94.5px;
+            height: 90px;
+            border: 1.5px solid #ffffff6b;
+            background: linear-gradient(to bottom,#ffffff,rgb(43, 255, 0),rgb(3, 248, 228));
+            border-radius: 10px;
+            position: absolute;
+            top: -100px;
+        }
+        /* 中级难度样式 */
+        .wrapper .orGame{
+            width: 100%;
+            height: 900px;
+            /* background-image: url("D:/练习项目/原生JS节奏大师/img/s.jpg"); */
+            background-size: 100% 100%;
+            position: absolute;
+            font-size: 40px;
+        }
+        /* 高级难度样式 */
+        .wrapper .haGame{
+            width: 100%;
+            height: 900px;
+            /* background-image: url("D:/练习项目/原生JS节奏大师/img/timg.jpg"); */
+            background-size: 100% 100%;
+            position: absolute;
+            font-size: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 背景音按钮 -->
+    <audio src=""></audio>
+    <!-- 开始页 -->
+    <div class="top_index">
+        <i class="game_name">原生JS节奏大师</i>
+        <ul class="level">
+            <li class="level1">普通</li>
+            <li class="level2">中级</li>
+            <li class="level3">高级</li>
+        </ul>
+        <div class="startBtn">S&nbsp;T&nbsp;A&nbsp;R&nbsp;T</div>
+    </div>
+    <!-- 游戏界面 -->
+    <div class="wrapper">
+        <!-- 普通难度游戏界面 -->
+        <div class="esGame gameStyle">
+            <div class="esGame_window">
+                <div class="time"></div>
+                <ul class="playerHP">
+                    <li class="HP"></li>
+                </ul>
+                <div class="scorebd">
+                    <i class="score" id="score">0&nbsp;0&nbsp;0&nbsp;0&nbsp;</i>
+                    <div class="startAndStop">+</div>
+                </div>
+                <ul class="funmein">
+                    <li>继续</li>
+                    <li>从新开始</li>
+                    <li>背景音乐:&nbsp;开</li>
+                    <li>规则</li>
+                </ul>
+                <div class="content">
+                    <b></b>
+                    <ul>
+                        <li class="gamebtn">
+                            <button type="button">A</button>
+                        </li>
+                        <li class="gamebtn">
+                            <button type="button">S</button>
+                        </li>
+                        <li class="gamebtn">
+                            <button type="button">D</button>
+                        </li>
+                        <li class="gamebtn">
+                            <button type="button">J</button>
+                        </li>
+                        <li class="gamebtn">
+                            <button type="button">K</button>
+                        </li>
+                        <li class="gamebtn">
+                            <button type="button">L</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- 中级难度游戏界面 -->
+        <div class="orGame gameStyle"></div>
+        <!-- 高级难度游戏界面 -->
+        <div class="haGame gameStyle"></div>
+    </div>
+    <script>
+        var topIndex = document.getElementsByClassName('top_index')[0];
+        var level = document.getElementsByClassName('level')[0];
+        var levels = level.getElementsByTagName('li');
+        var startBtn = document.getElementsByClassName('startBtn')[0];
+        var wrapper = document.getElementsByClassName('wrapper')[0];
+        var gameStyle = document.getElementsByClassName('gameStyle');
+        var esGameWindow = gameStyle[0].children[0];
+        var startAndStop = document.getElementsByClassName('startAndStop')[0];
+        var funmein = document.getElementsByClassName('funmein')[0];
+        var startTime = document.getElementsByClassName('time')[0];
+        var gamebtn = document.getElementsByClassName("gamebtn");
+        var button = document.getElementsByTagName("button");
+        var b = document.getElementsByTagName("b")[0];
+        var score = document.getElementById("score");
+        var gameHP = document.getElementsByClassName("HP")[0];
+        var randomBoxLen = document.getElementsByClassName("randomBox");
+        // var deleteElemt = document.getElementsByClassName(thisID);
+        var meinLi = funmein.children;
+        var state = 0; //难度状态码
+        var start = true; //逻辑判断开关
+        var timer; //定时器
+        var timer1;
+        var timer2;
+        var n; //倒计时
+        var boxNum = 0;
+        var HPKey = true;
+        var scoreNum = 0;
+        var thisTop;
+        var createBoxRemove;
+        var gameDomRemove = false;
+        var thisID;
+        var randomBoxnum = 0;
+        var only; //小方块唯一标识
+        var cot = 0; //防止连续扣血状态码
+
+        bindEvent();
+        function bindEvent() {
+            var key = false;
+            for (var i = 0; i < levels.length; i++){
+                (function (j){
+                    levels[j].onclick = function (){
+                        for (var k = 0; k < levels.length; k++){
+                            levels[k].style.opacity = 0.5;
+                        }
+                        this.style.opacity = 1;
+                        key = true;
+                        if (key) {
+                            startBtn.addEventListener('click', function (){
+                                topIndex.style.opacity = 0.5;
+                                if (topIndex.style.opacity == 0.5) {
+                                    topIndex.style.display = "none";
+                                    if (j == 0){
+                                        state = 1;
+                                    }else if (j == 1){
+                                        state = 2;
+                                    }else if(j == 2){
+                                        state = 3;
+                                    }
+                                    startGame();
+                                    key = false;
+                                }
+                            });
+                        }
+                    }
+                }(i));
+            }
+            startBtn.addEventListener('click', function (){
+                if (!key){
+                    alert("请选择游戏难度");
+                }
+            });
+            startAndStop.addEventListener("click",startAndStopGame);
+        }
+        
+        function init(){
+            for(var i = 0; i < gamebtn.length; i ++){
+                gamebtn[i].setAttribute("id", i + "");
+            }
+        }
+        
+        function startGame(){
+            if(state == 1){
+                alert("难度设置成功");
+                init(); //初始化
+                easliy(state);
+            }else if(state == 2){
+                alert("开发中");
+                ordinary(state);
+            }else if(state == 3){
+                alert("开发中");
+                hard(state);
+            }
+        }
+
+        function easliy(dom){
+            if(dom == 1){
+                for(var i = 0; i < gameStyle.length; i++){
+                    gameStyle[i].style.display = "none";
+                }
+                wrapper.style.display = "block";
+                gameStyle[0].style.display = "block";
+                drag(esGameWindow);
+                n = 3;
+                if(n){
+                    startTime.innerHTML = n;
+                    timer = setInterval(function(){
+                        n --;
+                        startTime.innerHTML = n;
+                        if(!n){
+                        clearInterval(timer);
+                        startTime.innerHTML = "游戏开始!";
+                        setTimeout(function(){
+                            startTime.style.display = "none";
+                        setTimeout(function(){
+                            createDiv(); //开始创建div
+                        },900);
+                        },1500);
+                    }
+                    },1000);
+                    gameButtom();
+                    score.innerHTML = 0 + 0 + scoreNum + "";
+                }
+            }
+        }
+
+           function ordinary(dom){
+            if(dom == 2){
+                for(var i = 0; i < gameStyle.length; i++){
+                    gameStyle[i].style.display = "none";
+                }
+                gameStyle[1].style.display = "block";
+                gameStyle[1].innerHTML = "开发中.........";
+            }
+        }
+
+           function hard(dom){
+            if(dom == 3){
+                for(var i = 0; i < gameStyle.length; i++){
+                    gameStyle[i].style.display = "none";
+                }
+                gameStyle[2].style.display = "block";
+                gameStyle[2].innerHTML = "开发中........";
+            }
+        }
+
+        //窗口拖拽函数
+        function drag(elem){
+            var disX;
+            var disY;
+            elem.addEventListener("mousedown",function(e){
+                disX = e.pageX - parseInt(getComputedStyle(elem).left);
+                disY = e.pageY - parseInt(getComputedStyle(elem).top);
+                console.log(disX + " " + disY);
+                document.addEventListener("mousemove",move);
+                document.addEventListener("mouseup",over);
+            });
+            function move(e){
+                var e = e || window.event;
+                elem.style.left = e.pageX - disX + "px";
+                elem.style.top = e.pageY - disY + "px";
+            }
+            function over(){
+                document.removeEventListener("mousemove",move);
+                document.removeEventListener("mouseup",over);
+            }
+        }
+
+        //功能菜单
+        function startAndStopGame(){
+            if(start){
+                funmein.style.height = "146px";
+                for(var i = 0; i < meinLi.length; i ++){
+                    meinLi[i].style.display = "block";
+                }
+                start = false;
+            }else{
+                funmein.style.height = "0px";
+                for(var i = 0; i < meinLi.length; i ++){
+                    meinLi[i].style.display = "none";
+                }
+                start = true;
+            }
+        }
+
+        //核心函数
+        function RandomBox(){
+            this.createBox = document.createElement("div");
+            this.randomNum = Math.floor(Math.random() * 6);
+            gamebtn[this.randomNum].appendChild(this.createBox);
+            this.createBox.classList.add("randomBox");
+        }
+
+        function createDiv(){  //格两秒创建方块
+           timer1 = setInterval(function(){
+                var randomBox = new RandomBox();
+                 randomBoxnum ++;
+                 thisID = parseInt(randomBox.createBox.parentNode.getAttribute("id"));
+                 only = thisID + "-" + randomBoxnum;
+                 console.log(only);
+                randomBox.createBox.classList.add(only);
+                boxNum = randomBoxLen.length;
+                randomSpeed(randomBox);
+                if(boxNum > 10){
+                    boxNum --;
+                    randomBox.createBox.remove();
+                }
+            },2000);
+        }
+        
+        function randomSpeed(dom){
+            gameButtom(dom);
+            var speed = Math.floor(Math.random() * 10) + 3;
+            HPkey = true;
+        timer2 = setInterval(function(){
+            //  speed++;
+                 dom.createBox.style.top = parseInt(getComputedStyle(dom.createBox).top) +  speed + "px";
+                 thisTop = parseInt(dom.createBox.style.top);
+                 if(gameDomRemove){
+                    scoreAndEnd(thisTop,dom);
+                 }
+                 if(thisTop > 500){
+                     if(!dom.createBox.classList.contains(thisID)){
+                        dom.createBox.classList.add(thisID);
+                     }
+                 } 
+                 if(thisTop > 1000){
+                if(thisTop){
+                    setInterval(function(){
+                        thisTop = parseInt(getComputedStyle(dom.createBox).top);
+                        dom.createBox.remove();
+                    },10);
+                }
+             }
+                 if(HPkey){
+                    if(dom){
+                    if(parseInt(dom.createBox.style.top) > 1000){
+                        if(parseInt(getComputedStyle(gameHP).width) == 0 || parseInt(getComputedStyle(gameHP).width) < 0){
+                            startTime.style.display = "block";
+                            startTime.innerHTML = "GAME OVER";
+                            clearInterval(timer1);
+                            clearInterval(timer2);
+                        }
+                         dom.createBox.remove();
+                        HPkey = false;
+                    }
+                 }
+                 }
+                 if(gameDomRemove && parseInt(dom.createBox.style.top) > 889){   //判断删除元素
+                 if(dom && dom.createBox.classList.contains(only)){
+                    var elem = document.getElementsByClassName(only)[0];
+                    elem && elem.parentNode.removeChild(elem);
+                 }
+                 }
+             },20);
+             if(thisTop > 1000 && gameDomRemove){
+                // gameHP.style.width = parseInt(getComputedStyle(gameHP).width) - 28 + "px";
+                boxNum --;
+             }
+        }
+
+        gameButtom();
+        //按钮
+        function gameButtom(dom){
+            document.onkeydown = function(e){
+                
+                HPKey = false;
+                switch(e.keyCode){
+                    case 65: //A
+                    gameDomRemove = true;
+                    gamekeyFun();
+                    scoreAndEnd();
+                    button[0].style.backgroundColor = "red";
+                    b.style.display = "block";
+                    gamebtn[0].style.backgroundColor = "rgba(0,0,0,0.6)";
+                    break;
+                    case 83: //S
+                    gameDomRemove = true;
+                    gamekeyFun();
+                    scoreAndEnd();
+                    button[1].style.backgroundColor = "red";
+                    b.style.display = "block";
+                    gamebtn[1].style.backgroundColor = "rgba(0,0,0,0.6)";
+                    break;
+                    case 68: //D
+                    gameDomRemove = true;
+                    gamekeyFun();
+                    scoreAndEnd();
+                    button[2].style.backgroundColor = "red";
+                    b.style.display = "block";
+                    gamebtn[2].style.backgroundColor = "rgba(0,0,0,0.6)";
+                    break;
+                    case 74: //J
+                    gameDomRemove = true;
+                    gamekeyFun();
+                    scoreAndEnd();
+                    button[3].style.backgroundColor = "red";
+                    b.style.display = "block";
+                    gamebtn[3].style.backgroundColor = "rgba(0,0,0,0.6)";
+                    break;
+                    case 75: //k
+                    gameDomRemove = true;
+                    gamekeyFun();
+                    scoreAndEnd();
+                    button[4].style.backgroundColor = "red";
+                    b.style.display = "block";
+                    gamebtn[4].style.backgroundColor = "rgba(0,0,0,0.6)";
+                    break;
+                    case 76: //L
+                    gameDomRemove = true;
+                    gamekeyFun();
+                    scoreAndEnd();
+                    button[5].style.backgroundColor = "red";
+                    b.style.display = "block";
+                    gamebtn[5].style.backgroundColor = "rgba(0,0,0,0.6)";
+                    break;
+                }
+
+            }
+            document.onkeyup = function(e){
+                gameDomRemove = false;
+                HPKey = true;
+               for(var i = 0; i<button.length; i++){
+                   button[i].style.backgroundColor = "";
+                   gamebtn[i].style.backgroundColor = "";
+                   b.style.display = "none";
+               }
+            }
+        }
+
+        //加分、游戏失败
+        function scoreAndEnd(thisTop,dom){
+            if(thisTop < 869){
+                b.style.display = "block";
+                b.innerHTML = "落空";
+            }else if(thisTop > 869 && thisTop < 889){
+                scoreNum += 3;
+                b.style.display = "block";
+                score.innerHTML = scoreNum;
+                b.style.color = "#ff5500";
+                b.innerHTML = "很好";
+            }else if(thisTop > 889 && thisTop < 915){
+                scoreNum += 7;
+                b.style.display = "block";
+                score.innerHTML = scoreNum;
+                b.style.color = "#ffffff";
+                b.innerHTML = "非常好!";
+            }else if(thisTop > 915 && thisTop < 935){
+                scoreNum += 14;
+                b.style.display = "block";
+                score.innerHTML = scoreNum;
+                b.style.color = "gold";
+                b.innerHTML = "完美";
+            }else if(thisTop > 1000){
+                if(dom && !cot){
+                    dom.createBox.remove();
+                   gameHP.style.width = parseInt(getComputedStyle(gameHP).width) - 28 + "px";
+                   b.innerHTML = "";
+                   b.style.display = "none";
+                }
+            }
+            if(b.style.display = "block"){
+                setTimeout(function(){
+                    b.style.display = "none";
+                },1000);
+            }
+        }
+
+        //
+        function gamekeyFun(){
+             cot ++;
+            setTimeout(function(){
+                cot = 0;
+            },1000);
+        }
+        
+    </script>
+</body>
+
+</html>

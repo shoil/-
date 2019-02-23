@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <script> 
+        function Emloyee(name,code){
+            this.name = "tom";
+            this.code = "001";
+        }
+        var li = new Emloyee("jion","002");
+        document.write(li.name +"<br>");
+        document.write(li.code);
+        console.log(li.name +"<br>");
+        console.log(li.code);
+    </script> -->
+    <!-- <script>
+        function Person(name,age,sex){
+            var a = 0;
+            this.name = name;
+            this.age = age;
+            this.sex = sex;
+            function sss() {
+                a++;
+                document.write(a);
+            }
+            this.say = sss;   //创建有个隐式属性 return 会形成闭包
+        }
+
+        var one = new Person();
+        one.say();
+        one.say();
+        var two = new Person();
+        two.say();
+
+    </script> -->
+
+    
+    <!-- <script>
+        //改为可以输出0-9的形式
+        function bb(){
+            for(var i = 0; i < 10;i++){
+                arr[i] = function(){
+                    document.write(i);
+                }
+                return arr;
+            }
+        }
+        var arr1 = bb();
+        for(var i = 0; i<10; i++){
+            arr1[i]();
+        }
+    
+    
+    </script> -->
+    <!-- <script>
+        var str = false + 1;
+        document.write(str);
+        var demo = false == 1;
+        document.write(demo);
+        if(typeof(a)&&-true + (+undefiend) +""){   //undefiend 报错
+            document.write("打下坚实基础");
+        
+        }
+        !! "" +!! "" -  false|| document.write("能打印吗");
+        //不能打印
+    </script> -->
+    <!-- <script>
+         var x = 1, y = z = 0;
+         function add(n){
+             return n = n+1;
+         }
+         y = add(x);  //4
+         function add (n){
+             return n = n + 3;
+         }
+         z = add(x);   //4
+         //因为预编译前一个方法被后一个覆盖
+            
+    </script> -->
+    <!-- <script>
+        /* 下面那个能打印出1，2，3，4，5 */
+        // function foo(x) {
+        //     console.log(arguments);
+        //     // return x
+        // }
+        // foo(1,2,3,4,5)
+
+        // (function foo(x) {
+        //     console.log(arguments);
+        //     return x
+        // }(1,2,3,4,5));
+
+        // (function fun(b) {
+        //     console.log(arguments);
+        //     return b
+        // })(1,2,3,4,5);
+
+
+        // function foo(x){
+        //     console.log(arguments);
+        //     return x
+        // }(1,2,3,4,5)
+
+            // function foo() {bar.apply(null,arguments)}
+            // function bar(x) {console.log(arguments)}
+            // foo(1,2,3,4,5)
+
+
+
+
+
+    </script> -->
+    <!-- <script>
+        function b(x,y,a){
+            arguments[2] = 10;
+            alert(a);
+        }
+        b(1,2,3);
+
+        /* 将函数体改为
+        z= 10;
+        alert(z);
+         */
+         function c(x,y,z){
+            z = 10;
+            alert(z);
+         }
+         c(1,2,3);
+
+
+         /* 结果都是输出10 */
+    </script> -->
+    <!-- 一个方法求一个字符串的字节长度 -->
+    <!-- <script>
+
+        /* 
+        charCodeAt()方法可返回指定位置的字符的UniCode编码。这个返回值是0~65535之间的整数。
+        （当返回值<=时为英文返回值>255时为中文）
+ 
+        语法
+        stringObject.charCodeAt(index);
+         */
+        var str = "Hello world";
+        
+
+        document.write(str.charCodeAt(1));
+    </script> -->
+    <script>
+        
+        var str = "nihao暖色调还能"
+        var num = 0;
+
+        function add(str) {
+          
+            for (var i = 0; i < str.length; i++) {
+               
+                if (str.charCodeAt(i) > 255) {
+                    num += 2;
+                } else {
+                    num++
+                }
+            };
+            return num;
+        }
+        
+        console.log(add(str))
+       
+    </script>
+    <!-- <script>
+        var str = "jikfdsojfoijoielkn肯定就是离开家离开";
+        function bytesLength(str){
+            var count = str.length
+            for(i = 0; i<str.length; i++){
+                if(str.charCodeAt(i)>255){
+                    count ++;
+                }
+            }
+            return count
+        }
+        console.log(bytesLength(str))
+    
+    </script> -->
+
+    
+
+</body>
+
+</html>

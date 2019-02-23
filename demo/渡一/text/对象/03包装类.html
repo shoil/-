@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num = new Number(123);
+        var str = new String('abc');
+        var bol = new Boolean('false');
+        
+        //原始值没有属性和方法  undefined null不可以有属性
+        //null.num 会报错
+
+        // var str = new String('abcd');
+        // //字符串对象
+        // /* 字符串有原始值和字符串对象
+        // 原始值没有属性和方法
+        // 对象才有属性和方法
+        
+        //  */
+
+
+        // var num = new Number(123);
+        // var bol = new Boolean('true');
+        // var arr = [1,2,3,4]
+        arr.length = 2;
+        var str = "abcd";
+        str.length = 2;
+        /* new String('abcd').length = 2; delete*/
+        console.log(str);
+        console.log(str.length); 
+        
+    </script>
+</body>
+</html>

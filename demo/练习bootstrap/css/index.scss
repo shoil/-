@@ -1,0 +1,96 @@
+.head{
+    img{
+        width: 100%;
+    }
+}
+
+.carousel-inner{
+    .item{
+        img{
+            height: 500px;
+            width: 100%;
+        }
+    }
+}
+
+
+.serve {
+    margin-top: 100px;
+    height: 450px;
+    div {
+        text-align: center;
+        // height: 269px;
+        h1 { margin-top: 30px; }
+        p {
+            &:first-of-type { margin-top: 15px; }
+        }
+    }
+}
+.team{
+    background-image: linear-gradient(to top, #3b41c5 0%, #a981bb 49%, #ffc8a9 100%);
+    margin: auto;
+   
+    overflow: hidden;
+    text-align: center;
+    color: #dcdcdc;
+    font-family: SimHei;
+    div{
+        margin-top: 100px;
+        margin-bottom: 100px;
+        h1{
+            font-size: 35px;
+            line-height: 2em;
+        }
+        img{
+            width: 55px;
+            height: 55px;
+        }
+        p {
+            font-size: 20px;
+            line-height: 2em;
+        }
+    }
+}
+.minHead{
+    
+    text-align: center;
+    p{
+        font-weight: 700;
+        font-size: 38px;
+        font-family: oswald;
+        line-height: 2em;
+    }
+    .line{
+        margin-left: auto;
+        margin-right: auto;
+        width: 35%;
+        height: 2px;
+        background: black;
+        position:relative;
+        ::after{
+            display: block;
+            position: absolute;
+            background:red;
+            width: 10%;
+            height: 6px;
+        }
+    }
+   
+}
+.standard{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    div{
+
+        text-align:center;
+        img{
+            width: 80px;
+            height: 80px;
+           
+        }
+    }
+
+}

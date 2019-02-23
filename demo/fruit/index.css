@@ -1,0 +1,539 @@
+*{
+padding: 0;
+margin: 0;
+list-style: none;
+}
+
+body{
+    background-image: linear-gradient(-90deg, #16a085 0%, #f4d03f 100%);
+}
+.nav{
+    height: 100px;
+    width: 80%;
+    margin:0px auto;
+    position: relative;
+    background: linear-gradient(to top, #0fd850 0%, #f9f047 100%);
+}
+.nav-log{
+    position: absolute;
+    left: 0px;
+}
+.nav-log img{
+    width: 80px;
+    height: 80px;
+    padding: 10px 20px;
+}
+.nav-list{
+   position: absolute;
+   right: 0px;
+    width: 80;
+    height: 100px;
+    right: 0px;
+}
+
+.nav-list .menu{
+    height: 100px;
+    
+}
+.menu li{
+    top: 32px;
+    min-width: 140px;
+    background: linear-gradient(to top, #0fd850 0%, #f9f047 100%);
+}
+.menu>li{
+    float: left;
+    position: relative;
+}
+.menu>li:first-child{
+    border-radius: 5px 0 0 0 ;
+}
+.menu a{
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color:black;
+    padding: 0 25px;
+    font-size: 20px;
+    line-height: 36px;
+    border-left: 3px solid rgba(0, 0, 0, 0);
+    color: green;
+    text-transform: uppercase;
+}
+.menu li:hover{
+    background: linear-gradient(45deg, #874da2 0%, #c43a30 100%);
+}
+.menu li:hover>a{
+    color:white;
+    border-left: 3px solid #ffffff;
+}
+
+.submenu{
+    position: absolute;
+    max-height: 0;
+    left: 0;
+    top: 100%;
+    z-index: 10;
+    perspective: 400px;
+}
+.submenu li{
+    opacity:1;
+    transform: rotate3d(0,1,0,90deg);
+    transition: opacity .4s, transform .5s;
+}
+.menu>li:hover .submenu{
+    max-height: 1000px;
+    z-index: 10px;
+}
+.menu>li:hover .submenu li{
+    opacity: 1;
+    transform: rotate3d(0,0,0,0deg);
+}
+
+.submenu li:nth-child(1) {
+    transition-delay: 0ms;
+}
+.submenu li:nth-child(2) {
+    transition-delay: 100ms;
+}
+.submenu li:nth-child(3) {
+    transition-delay: 200ms;
+}
+.submenu li:nth-child(4) {
+    transition-delay: 300ms;
+}
+.submenu li:nth-child(5) {
+    transition-delay: 400ms;
+}
+/* nav end */
+
+/* 轮播 swiper */
+.swiper-container {
+    top: 20px;
+    bottom: 20px;
+    width: 80%;
+    height: 500px;
+    overflow: hidden;
+}  
+.swiper-slide img{
+    width: 100%;
+    height: 500px;
+}
+
+
+/* 介绍 */
+.about{
+    position: relative;
+    width: 100%;
+    background:white;
+    top: 20px;
+    height: 600px;
+}
+.about-top::after{
+    content: '';
+    display: block;
+    width: 43%;
+    height: 1px;
+    border-bottom: 2px dashed green;
+    position: absolute;
+    top: 46px;
+    left: 0px;
+}
+.about-top::before{
+    content: '';
+    display: block;
+    width: 43%;
+    height: 1px;
+    border-bottom: 2px dashed green;
+    position: absolute;
+    top: 46px;
+    right: 0px;
+}
+.about-top span{
+    font-size: 28px; 
+    font-family: SimHei; 
+    letter-spacing: 7px; 
+    color: rgb(0, 0, 0);
+}
+.about-botton span{
+    font-size: 19px; 
+    font-family: 微软雅黑; 
+    color: rgb(102, 102, 102);
+}
+
+.about-introduce{
+    border-radius: 10px;
+    z-index: 10;
+    height: 450px;
+    background-color: rgb(0, 113, 51);
+    width: 625px;
+    position: relative;
+ 
+}
+.about-container{
+    width: 80%;
+    margin: 15px auto;
+    text-align: justify;
+}
+.about-container h3{
+    color: wheat;
+    padding: 20px;
+}
+.about-container span{
+    color: rgb(255, 255, 255); 
+    font-family: 微软雅黑; 
+    font-size: 17px;
+}
+.about-button{
+    border: 2px solid white;
+    width:124px;
+    height:40px;
+    line-height:40px;
+    text-align: center;
+    position: absolute;
+    right: 66px;
+    top: 376px;
+}
+.about-button:hover{
+    background-color: #ff6600;
+   
+}
+.about-button span{
+    color: white;
+}
+.about-image{
+    position: absolute;
+    right: 0px;
+    top: 75px;
+    width: 625px;
+    height: 465px;
+}
+.about-image img{
+    width: 625px;
+    height: 400px;
+    transition: all 1000ms;
+}
+.about-image img:hover{
+    width: 700px;
+    height: 460px;
+}
+
+/* 产品展示 */
+.product{
+    top:40px;
+     width: 80%;
+     margin: 0 auto;
+     height: 700px;
+     background: white url(images/f1.png) no-repeat center center;
+     position: relative;
+}
+.product .logo{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.product-img{
+    width: 330px;
+    height: 150px;
+    position: absolute;
+    box-shadow: darkgrey 0px 0px 10px 2px;
+    
+}
+.product-img img{
+    width: 150px;
+    height: 100px;
+    padding: 20px 10px 0px 20px;
+    vertical-align: center;
+}
+.product-img span{
+    
+    display: inline-block;
+    width: 120px;
+    height: 105px;
+    overflow: hidden;
+}
+
+.product-apple{
+    top: 30%;
+    left: 5%;
+}
+.one{
+    top: 100%;
+    left: 100%;
+}
+.product-apple:hover .one{
+    display: block;
+    top: -110%;
+    left: 0%;
+}
+
+.product-kimi{
+    top: 3%;
+    left: 37%;
+}
+.two{
+    top: 120%;
+    left: 0%;
+}
+.product-kimi:hover .two{
+    display: block;
+    top: 0%;
+    left: 110%;
+}
+
+.product-strawberry{
+    top: 30%;
+    left: 68%;
+}
+.three{
+    top: 100%;
+    left: 100%;
+}
+.product-strawberry:hover .three{
+    display: block;
+    top: -110%;
+    left: 0;
+}
+
+.product-watermelon{
+    top: 76%;
+    left: 8%;
+}
+.four{
+    top: 100%;
+    left: 100%;
+}
+.product-watermelon:hover .four{
+    display: block;
+    top: -110%;
+    left: 0;
+}
+
+.product-pomegranate{
+    top: 76%;
+    left: 64%;
+}
+.five{
+    top: 100%;
+    left: 100%;
+}
+.product-pomegranate:hover .five{
+    display: block;
+    top: -110%;
+    left: 0;
+}
+.address{
+    display:none;
+    transition: all 2s;
+    width: 330px;
+    height: 150px;
+    position: absolute;
+    box-shadow: darkgrey 0px 0px 10px 2px;
+}
+.address img{
+    width: 150px;
+    height: 100px;
+    padding: 20px 10px 0px 20px;
+    vertical-align: center;
+}
+
+/* 了解更多 */
+.more{
+    position: relative;
+    width: 80%;
+    height: 350px;
+    margin: 0px auto;
+    background:white;
+    top: 50px;
+    overflow: hidden;
+}
+.more-top::after{
+    content: '';
+    display: block;
+    width: 43%;
+    height: 1px;
+    border-bottom: 2px dashed green;
+    position: absolute;
+    top: 60px;
+    left: 0px;
+}
+.more-top::before{
+    content: '';
+    display: block;
+    width: 43%;
+    height: 1px;
+    border-bottom: 2px dashed green;
+    position: absolute;
+    top: 60px;
+    right: 0px;
+}
+.more-top span{
+    font-size: 28px; 
+    font-family: SimHei; 
+    letter-spacing: 7px; 
+    color: rgb(0, 0, 0);
+}
+.more-botton span{
+    font-size: 19px; 
+    font-family: 微软雅黑; 
+    color: rgb(102, 102, 102);
+}
+.more-container{
+    /* overflow: hidden; */
+    top: 110px;
+    position: absolute;
+    width: 100%;
+    height:200px;
+    
+}
+.more-box{
+    /* justify-content: space-around;
+    flex-direction:row; */
+    position: absolute;
+    width: 24%;
+    height: 200px;
+   overflow: hidden;
+}
+.weixin{
+    top: 0px;
+    left: 5%;
+}
+.taobao{
+    top: 0px;
+    left: 38%;
+}
+.toutiao{
+    top: 0px;
+    left: 71%;
+}
+.more-box b{
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    line-height: 200px;
+}
+.more-box img{
+    width: 100%;
+    height: 200px;
+}
+
+.cover{
+    width: 100%;
+    height: 200px;
+    background: rgba(200,40,00,0.2) ;
+    transition: all 2s;
+    position: relative;
+    top:0px;
+    /* transform-origin: right top; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    z-index: 999;
+}
+.cover img{
+    width: 35%;
+    height: 45%;
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    
+}
+.more-box:hover .cover{
+    top: -205px;
+    z-index: 999;
+}
+
+/* 联系我们 */
+.bottom{
+    position: relative;
+    top: 60px;
+    width: 80%;
+    margin: 0 auto;
+}
+.bottom-about{
+    position: relative;
+}
+.bottom-about img{
+    padding: 15px 15px 0px 15px;
+}
+.bottom-address{
+    position: absolute;
+    top: 71px;
+    left: 130px;
+    color: white;
+    font-size: 20px;
+}
+.bottom-phone{
+    position: absolute;
+    top: 125px;
+    left: 130px;
+    color: white;
+    font-size: 20px;
+}
+.bottom i{
+    position: relative;
+    top: 25px;
+    color: white;
+    font-size:30px;
+    padding-left: 40px;
+}
+.wx-scan{
+    position: absolute;
+    height: 200px;
+    width: 150px;
+    top:20px;
+    left: 60%;
+}
+.logo-size{
+    width: 40px;
+}
+#size-phone{
+    top: 5px;
+    width: 19px;
+}
+.wx-qq{
+    position: absolute;
+    top: 0px;
+    left:20px;
+}
+.wx-wx{
+    position: absolute;
+    top: 0px;
+    right: 20px; 
+}
+.wx-er{
+    position: absolute;
+    top:35px;
+    left: 0px;
+    width: 150px;
+}
+.app-scan{
+    position: absolute;
+    height: 200px;
+    width: 150px;
+    top:20px;
+    right: 0px;
+}
+.bottom::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    border-bottom:3px solid white;
+    position: absolute;
+    top: 250px;
+}
+.statement{
+    position: relative;
+    top: 132px;
+    height: 32px;
+}
+.statement p{
+    width: 100%;
+    color: white;
+    text-align: center;
+    line-height: center;
+}

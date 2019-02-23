@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var mrYC ={
+            name: "yc",
+            age: 18,
+            sex: "male",
+            smoke: function(){
+                console.log("I am smoking！ cool！！");
+            },
+        }
+        mrYC.wife = "wcm";
+        mrYC.age = 22; 
+        console.log(mrYC.wife);
+        delete mrYC.smoke;
+        console.log(mrYC);
+    </script>
+    <script>
+        var tom = {
+            girlFirend : "小明",
+            prepareWife : "小王",
+            wife: "",
+            getMarried : function (){
+                this.wife = this.prepareWife;
+            },
+            divorce: function (){
+                delete this.wife;
+                this.prepareWife = this.girlFirend;
+            },
+            changePrepareWife : function (someone) {
+                this.prepareWife = someone;
+            }
+        }
+    </script>
+</body>
+</html>

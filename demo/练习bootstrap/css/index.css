@@ -1,0 +1,99 @@
+.head img {
+  width: 100%;
+}
+
+.carousel-inner .item img {
+  height: 500px;
+  width: 100%;
+}
+
+.serve {
+  margin-top: 100px;
+  height: 450px;
+}
+
+.serve div {
+  text-align: center;
+}
+
+.serve div h1 {
+  margin-top: 30px;
+}
+
+.serve div p:first-of-type {
+  margin-top: 15px;
+}
+
+.team {
+  background-image: linear-gradient(to top, #3b41c5 0%, #a981bb 49%, #ffc8a9 100%);
+  margin: auto;
+  overflow: hidden;
+  text-align: center;
+  color: #dcdcdc;
+  font-family: SimHei;
+}
+
+.team div {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.team div h1 {
+  font-size: 35px;
+  line-height: 2em;
+}
+
+.team div img {
+  width: 55px;
+  height: 55px;
+}
+
+.team div p {
+  font-size: 20px;
+  line-height: 2em;
+}
+
+.minHead {
+  text-align: center;
+}
+
+.minHead p {
+  font-weight: 700;
+  font-size: 38px;
+  font-family: oswald;
+  line-height: 2em;
+}
+
+.minHead .line {
+  margin-left: auto;
+  margin-right: auto;
+  width: 35%;
+  height: 2px;
+  background: black;
+  position: relative;
+}
+
+.minHead .line ::after {
+  display: block;
+  position: absolute;
+  background: red;
+  width: 10%;
+  height: 6px;
+}
+
+.standard {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.standard div {
+  text-align: center;
+}
+
+.standard div img {
+  width: 80px;
+  height: 80px;
+}

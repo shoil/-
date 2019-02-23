@@ -1,0 +1,402 @@
+.top {
+  height: 36px;
+  background-color: #fafafa;
+}
+
+.top span {
+  margin: 0 15px;
+}
+
+.top a {
+  line-height: 36px;
+}
+
+.top .login {
+  float: right;
+}
+
+.logo {
+  position: relative;
+  height: 80px;
+}
+
+.logo > img {
+  position: absolute;
+  top: 10px;
+  left: 0;
+}
+
+.logo .logo-right {
+  float: right;
+}
+
+.logo .logo-right > p {
+  margin-top: 10px;
+  text-align: right;
+}
+
+.logo .logo-right > p > img {
+  position: relative;
+  top: 3px;
+}
+
+.logo .logo-right .parent {
+  position: relative;
+}
+
+.logo .logo-right .parent input:first-of-type {
+  position: absolute;
+  right: 153px;
+  top: 10px;
+  height: 40px;
+  width: 385px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.logo .logo-right .parent input:last-of-type {
+  position: absolute;
+  right: 114px;
+  top: 10px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ccc;
+  outline: none;
+  background: #fff url("../images/fangdajing.png") no-repeat center center;
+}
+
+.logo .logo-right .parent > span {
+  position: relative;
+  right: 176px;
+  top: 20px;
+}
+
+.logo .logo-right > a {
+  display: inline-block;
+  height: 40px;
+  width: 100px;
+  line-height: 40px;
+  font-size: 14px;
+  background-color: #ffdb3b;
+  text-align: center;
+  position: relative;
+  top: -6px;
+  right: -39px;
+}
+
+.nav {
+  margin-top: 10px;
+}
+
+.nav li {
+  float: left;
+}
+
+.nav li:first-of-type a {
+  background-color: #ff4a00;
+}
+
+.nav li a {
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 26px;
+  background-color: #40414f;
+  font-size: 14px;
+  color: #fff;
+}
+
+.nav li a:hover {
+  background-color: #ff4a00;
+}
+
+.nav li a i {
+  margin-left: 106px;
+}
+
+/*---------------bottom---------------*/
+.bottom {
+  margin-top: 30px;
+  background-color: #fafafa;
+}
+
+.fix {
+  border-bottom: 1px solid #ccc;
+}
+
+.fix li {
+  box-sizing: border-box;
+  padding-top: 52px;
+  height: 155px;
+  text-align: center;
+}
+
+.fix li p {
+  font-size: 14px;
+  line-height: 34px;
+}
+
+.aboutus {
+  margin-top: 30px;
+  padding-bottom: 35px;
+  border-bottom: 1px solid #ccc;
+}
+
+.aboutus ul {
+  float: left;
+  width: 77%;
+}
+
+.aboutus ul li {
+  padding-left: 29px;
+  padding-bottom: 3px;
+  box-sizing: border-box;
+  border-right: 1px solid #ccc;
+}
+
+.aboutus ul li a {
+  color: #aaa;
+  line-height: 25px;
+}
+
+.aboutus ul li a:first-of-type {
+  font-size: 14px;
+  color: #000;
+  line-height: 35px;
+}
+
+.aboutus ul li:first-of-type {
+  padding-left: 0;
+}
+
+.aboutus > div {
+  float: left;
+  padding-left: 84px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.aboutus > div h1 {
+  margin-bottom: 6px;
+}
+
+.aboutus > div p {
+  color: #aaa;
+}
+
+.aboutus > div a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 3px 3px;
+  color: #fff;
+  background-color: #ff4a00;
+}
+
+.bottom > .container > p:first-of-type {
+  margin-top: 30px;
+}
+
+.bottom > .container > p:last-of-type {
+  margin-bottom: 50px;
+}
+
+.bottom > .container p {
+  text-align: center;
+}
+
+.bottom > .container p:first-of-type {
+  margin-bottom: 3px;
+}
+
+.bottom > .container p:first-of-type span {
+  margin: 0 5px;
+}
+
+.bottom > .container p:last-of-type {
+  margin-top: 10px;
+}
+
+.bottom > .container p:last-of-type img {
+  position: relative;
+  top: 7px;
+}
+
+.bottom > .container p:last-of-type select {
+  margin-left: 10px;
+  width: 200px;
+  height: 40px;
+  color: #aaa;
+}
+
+.nav-bar {
+  height: 30px;
+  line-height: 30px;
+  margin-top: 15px;
+}
+
+.nav-bar span:first-of-type {
+  font-size: 14px;
+}
+
+.nav-bar span:nth-of-type(2) {
+  margin: 0 5px;
+}
+
+.nav-bar ul {
+  float: right;
+}
+
+.nav-bar ul li {
+  float: left;
+  margin-right: 15px;
+}
+
+.nav-bar ul li:not(:last-of-type) a:hover {
+  color: #ff4a00;
+}
+
+.nav-bar ul li:last-of-type {
+  margin-right: 0;
+}
+
+.nav-bar ul li:last-of-type > a {
+  float: right;
+  display: block;
+  padding: 0px 30px;
+  background-color: #ff4a00;
+  color: #fff;
+}
+
+.banner1, .banner2, .banner3, .banner6 {
+  text-align: center;
+  position: relative;
+  height: 917px;
+  background: url("../images/hezi.png") no-repeat -212px 0;
+}
+
+.banner1 > img:first-of-type, .banner2 > img:first-of-type, .banner3 > img:first-of-type, .banner6 > img:first-of-type {
+  position: absolute;
+  left: 264px;
+  top: 50px;
+}
+
+.banner1 h1, .banner2 h1, .banner3 h1, .banner6 h1 {
+  margin-top: 85px;
+  font-size: 60px;
+}
+
+.banner1 p, .banner2 p, .banner3 p, .banner6 p {
+  font-size: 20px;
+  margin-top: 15px;
+  color: #aaa;
+}
+
+.banner1 span, .banner2 span, .banner3 span, .banner6 span {
+  display: inline-block;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 50px;
+  color: #ff4a00;
+}
+
+.banner1 i, .banner2 i, .banner3 i, .banner6 i {
+  font-size: 20px;
+  margin-left: 3px;
+  font-style: normal;
+}
+
+.banner1 a, .banner2 a, .banner3 a, .banner6 a {
+  color: #fff;
+  font-size: 20px;
+  padding: 10px 35px;
+  background-color: #ff4a00;
+  border-radius: 5px;
+}
+
+.banner2 {
+  background: url("../images/hz-24.jpg") no-repeat -568px 0;
+}
+
+.banner3 {
+  height: 970px;
+  background: url("../images/jihe.png") no-repeat center -10px;
+}
+
+.banner4 {
+  height: 1250px;
+  background: url(../images/dianying.png) no-repeat center 0;
+}
+
+.banner5 {
+  height: 970px;
+  background: url(../images/jiating.png) no-repeat center 0;
+}
+
+.banner6 {
+  background-color: #fcfcfc !important;
+  width: 100%;
+  height: 720px;
+  text-align: center;
+  background: none;
+}
+
+.hz-about {
+  background-color: #fcfcfc;
+}
+
+.hz-about li {
+  float: left;
+  text-align: center;
+  height: 200px;
+  box-sizing: border-box;
+}
+
+.hz-about li:not(:last-of-type) {
+  border-right: 1px solid #ccc;
+}
+
+.hz-about li img {
+  margin-top: 60px;
+}
+
+.hz-about li p {
+  font-size: 20px;
+  margin-top: 10px;
+  color: #aaa;
+}
+
+.goods {
+  margin-top: 20px;
+  margin-bottom: 70px;
+}
+
+.goods > div {
+  text-align: center;
+  height: 435px;
+}
+
+.goods > div:not(:last-of-type) {
+  border-right: 1px solid #ccc;
+}
+
+.goods > div img {
+  margin-top: 28px;
+}
+
+.goods > div > p {
+  font-size: 20px;
+}
+
+.goods > div > p:nth-of-type(1) {
+  line-height: 50px;
+}
+
+.goods > div > p:nth-of-type(2) {
+  color: #aaa;
+}
+
+.goods > div > p:nth-of-type(3) {
+  color: #ff4a00;
+  margin-top: 20px;
+}

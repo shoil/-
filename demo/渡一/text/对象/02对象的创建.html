@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 对像创建方法 -->
+    <!-- <script>
+        /* 
+        1.var obj = {} plainObject 对象字面量/对象直接量
+        2.构造函数
+            1）系统自带的构造函数
+            2）自定义
+         */
+
+        //  2.1
+        // var obj = new Object();
+        // obj.name = 'obj';
+        // obj.sex = 'male';
+        // abj.say = function () {
+
+        // }
+        // var  obj = {
+        //     name: 'abc'
+        // }
+        // //2.2
+        function Car(color){
+            this.color = color
+            this.name = "BMW";
+            this.height = 1400;
+            this.lang = 4990;
+            this.health = 100;
+            this.run = function () {
+                this.health --;
+            }
+        }
+        var car = new Car( "red");
+        var car1 = new Car("green");
+    </script> -->
+    <script>
+        /* 构造函数内部原理 
+        1.在函数体最前面隐式加上var  this = {};
+        2.执行this.xxx= xxx；
+        3.隐式的返回
+        */
+        function Person(name, height) {
+            // var this = {}; //隐形
+            this.name = name;
+            this.height = height;
+            this.say = function () {
+                console.log(this.say);
+            }
+            // return {};  // 引用值会改变构造方法中的属性和方法
+            // return 123; // 创建对象后不能返回原始值
+
+            // return this; //隐形
+        }
+        var person = new Person("小米", 123);
+        var person1 = new Person("xiaohua",423);
+    </script>
+</body>
+
+</html>

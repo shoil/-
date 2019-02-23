@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.carousel {
+  margin-bottom: 50px;
+}
+
+@media (max-width: 768px) {
+  .enterprise {
+    width: 80%;
+    text-align: center;
+    margin: auto;
+  }
+  .enterprise h3 {
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+  .enterprise .enterprise-contnainer {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 50px;
+    overflow: hidden;
+  }
+  .enterprise .enterprise-contnainer .enterprise-one {
+    box-sizing: border-box;
+    padding: 0px 15px;
+  }
+  .enterprise .enterprise-contnainer .enterprise-one .tab {
+    font-size: 24px;
+    color: #2dae36;
+    margin-top: 10px;
+  }
+  .enterprise .enterprise-contnainer .enterprise-one .small-tab {
+    margin-top: 10px;
+    color: #666;
+  }
+}
+
+@media (min-width: 768px) {
+  .enterprise {
+    width: 80%;
+    text-align: center;
+    margin: auto;
+  }
+  .enterprise h3 {
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+  .enterprise .enterprise-contnainer {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 50px;
+    overflow: hidden;
+  }
+  .enterprise .enterprise-contnainer .enterprise-one {
+    box-sizing: border-box;
+    padding: 0px 15px;
+  }
+  .enterprise .enterprise-contnainer .enterprise-one .tab {
+    font-size: 24px;
+    color: #2dae36;
+    margin-top: 10px;
+  }
+  .enterprise .enterprise-contnainer .enterprise-one .small-tab {
+    margin-top: 10px;
+    color: #666;
+  }
+}
+
+@media (min-width: 992px) {
+  .enterprise {
+    width: 80%;
+    text-align: center;
+    margin: auto;
+  }
+  .enterprise h3 {
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+  .enterprise .enterprise-contnainer {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 50px;
+    overflow: hidden;
+  }
+  .enterprise .enterprise-contnainer .enterprise-one {
+    box-sizing: border-box;
+    padding: 0px 15px;
+  }
+  .enterprise .enterprise-contnainer .enterprise-one .tab {
+    font-size: 24px;
+    color: #2dae36;
+    margin-bottom: 10px;
+  }
+  .enterprise .enterprise-contnainer .enterprise-one .small-tab {
+    margin-bottom: 10px;
+    color: #666;
+  }
+}
+
+@media (min-width: 1200px) {
+  .enterprise {
+    width: 80%;
+    text-align: center;
+    margin: auto;
+  }
+  .enterprise h3 {
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+  .enterprise .enterprise-contnainer {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 50px;
+    overflow: hidden;
+  }
+  .enterprise .enterprise-contnainer .enterprise-one {
+    box-sizing: border-box;
+    padding: 0px 15px;
+  }
+  .enterprise .enterprise-contnainer .enterprise-one .enterprise-image {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  .enterprise .enterprise-contnainer .enterprise-one .enterprise-image img {
+    width: 30%;
+  }
+  .enterprise .enterprise-contnainer .enterprise-one .tab {
+    font-size: 24px;
+    color: #2dae36;
+    margin-top: 10px;
+  }
+  .enterprise .enterprise-contnainer .enterprise-one .small-tab {
+    margin-top: 10px;
+    color: #666;
+  }
+}
+
+.product {
+  width: 80%;
+  height: 100%;
+  margin: auto;
+}
+
+.product .product-title {
+  width: 100%;
+  border-bottom: 1px solid #2dae36;
+  margin-bottom: 10px;
+}
+
+.product .product-title p {
+  color: white;
+  height: 42px;
+  width: 120px;
+  font-size: 20px;
+  line-height: 42px;
+  text-align: center;
+  background: #2dae36;
+  border-radius: 16px 0px 16px 0px;
+  margin: 0;
+}
+
+.product .product-list {
+  box-sizing: border-box;
+}
+
+.product .product-list .text-center {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.product .product-list .text-center .product-one {
+  padding: 15px;
+}
+
+.product .product-list .text-center .product-one div img {
+  width: 100%;
+}
+
+.product .product-list:hover .text-center {
+  display: table;
+  content: "";
+  box-sizing: border-box;
+}

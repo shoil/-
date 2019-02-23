@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        a{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- <script>
+        function foo(x){
+            console.log(arguments);
+            return x;
+        }
+        foo(1,2,3,4,5);
+    </script> -->
+    <!-- <script>
+        function foo(x){
+            console.log(arguments);
+            return x;
+        }(1,2,3,4,5) //不执行
+    </script>
+    <script>
+        (function foo(x){
+            console.log(arguments);
+            return x;
+        })(1,2,3,4,5)
+    </script> -->
+    <script>
+        function foo(){
+            bar.apply(null,arguments);
+            //apply改变this指向但指向为null所以bar(arguments);
+        }
+        function bar () {
+            console.log(arguments); //
+        }
+        foo(1,2,3,4,5)  //Arguments(5)[1,2,3,4,5]
+    </script>
+</body>
+</html>
